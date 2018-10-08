@@ -1,0 +1,172 @@
+@import '~src/assets/style/common-util';
+@import '~src/assets/style/iphonex';
+.container {
+  background: #eaeff2;
+  width: 7.5rem;
+  margin: 0 auto;
+  position: relative;
+  padding-top: .88rem;
+  .banner {
+    position: relative; // margin-top: .88rem;
+    overflow: hidden;
+    text-align: center;
+    height: 3.13rem;
+    background: url(~src/assets/images/mobile/my/banner.jpg) no-repeat center;
+    background-size: contain;
+    color: #fff;
+    .avatar {
+      //   overflow: hidden;
+      margin: .48rem auto .05rem auto;
+      width: 1.68rem;
+      height: 1.68rem;
+      border: .02rem solid transparent;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center; //   z-index: 99;
+      position: relative;
+      img {
+        width: 1.44rem;
+        height: 1.44rem;
+        border: .06rem solid transparent;
+        border-radius: 50%;
+        background: transparent;
+      }
+      .expert {
+        width: .41rem;
+        height: .41rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+    .name {
+      font-size: .32rem;
+    }
+    .login-bg {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .7);
+    }
+    .login {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      .t1 {
+        font-size: .36rem;
+        color: #fff;
+        margin-top: .6rem;
+      }
+      .t2 {
+        font-size: .28rem;
+        color: #a0b3af;
+        margin-top: .15rem;
+      }
+      .btn-login {
+        font-size: .32rem;
+        display: block;
+        width: 5.56rem;
+        height: .8rem;
+        line-height: .8rem;
+        background: #03b98c;
+        color: #fff;
+        border-radius: .4rem;
+        margin: .25rem auto 0 auto;
+      }
+    }
+  }
+  .banner.xcx {
+    margin-top: 0;
+  }
+  .item {
+    position: relative;
+    height: 1.3rem;
+    background: #f8fbfb;
+    font-size: .3rem;
+    display: flex;
+    align-items: center;
+    @include setTouchBackground();
+    &:after {
+      @include setBottomLine();
+    }
+    &.space {
+      box-shadow: $bottom-shadow;
+      margin-bottom: .2rem;
+    }
+    .icon {
+      margin: 0 .2rem 0 .5rem;
+      display: block;
+      width: .4rem;
+      height: .4rem;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .circle {
+      position: absolute;
+      right: .83rem;
+      top: .57rem;
+      width: .16rem;
+      height: .16rem;
+      background: #fb5144;
+      border-radius: 50%;
+    }
+    .arrow {
+      position: absolute;
+      top: .49rem;
+      right: $side-distance;
+      width: .36rem;
+      height: .36rem;
+      background: url(~src/assets/images/mobile/my/chevron_s.png) no-repeat center;
+      background-size: contain;
+    }
+    a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+  .focus .icon {
+    background-image: url(~src/assets/images/mobile/my/icon_gz.png);
+    background-size: .36rem .36rem;
+  }
+  .favorite .icon {
+    background-image: url(~src/assets/images/mobile/my/icon_sc.png);
+    background-size: .36rem .36rem;
+  }
+  .doctor .icon {
+    background-image: url(~src/assets/images/mobile/my/icon_ys.png);
+    background-size: .36rem .36rem;
+  }
+  .activity .icon {
+    background-image: url(~src/assets/images/mobile/my/icon_hd.png);
+    background-size: .36rem .36rem;
+  }
+  .suggest .icon {
+    background-image: url(~src/assets/images/mobile/my/icon_fk.png);
+    background-size: .36rem .36rem;
+  }
+  .history .icon {
+    background-image: url(~src/assets/images/mobile/my/icon_fl.png);
+    background-size: .36rem .36rem;
+  }
+  .about .icon {
+    background-image: url(~src/assets/images/mobile/my/icon_gy.png);
+    background-size: .36rem .36rem;
+  }
+  .homepage .icon {
+    background-image: url(~src/assets/images/mobile/my/homepage.png);
+    background-size: .38rem .34rem;
+  }
+  .logout {
+    justify-content: center;
+  }
+}

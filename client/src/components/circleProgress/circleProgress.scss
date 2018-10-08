@@ -1,0 +1,17 @@
+@import "~src/assets/style/common-util";
+
+.svg-circle-wrap{
+	position: relative;
+	.svg-circle{
+		transform:rotate(-90deg);
+	}
+	circle {
+		transition: stroke-dasharray 1s linear;
+	}
+	.svg-num{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform:translate(-50%,-50%);
+	}
+}

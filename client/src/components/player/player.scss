@@ -1,0 +1,210 @@
+$player-mini-bg: rgba(38,39,41,0.96);
+$player-full-bg: #262729;
+$player-padding: .4rem;
+$bar-dot-size: .20rem;
+$bar-dot-bg: #5EFFD8;
+$bar-padding: .12rem;
+$bar-height: .03rem;
+$bar-progress-bg: #fff;
+$bar-time-bg: #06BA8E;
+
+.player-container .mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.player-container-mini {
+  width: 1.5rem;
+  height: .76rem;
+  border-radius: 1rem;
+  background: $player-mini-bg;
+  font-size: 0;
+
+  &.fixed {
+    position: fixed;
+    right: .37rem;
+    // bottom: 1.28rem;
+    bottom: 0;
+    margin-bottom: 1.28rem;
+    z-index: 101;
+  }
+
+  .player-ctrl-button {
+    text-align: left;
+    padding: .1rem;
+    .play, .pause {
+      width: .56rem;
+      height: .56rem;
+      margin-right: .25rem;
+    }
+  }
+}
+
+.player-container-full {
+  font-size: 0;
+  width: 7.5rem;
+  box-sizing: border-box;
+  padding: .3rem $player-padding .4rem;
+  background: $player-full-bg;
+
+  &.fixed {
+    margin: auto;
+    position: fixed;
+    bottom: 0;
+    z-index: 101;
+  }
+
+  .player-ctrl-button {
+    .play, .pause {
+      margin: 0 0.7rem;
+    }
+
+    .prev, .next {
+      opacity: .38;
+    }
+  }
+}
+
+.player-hint-title {
+  color: #fff;
+  text-align: center;
+  margin-top: .14rem;
+  .title {
+    font-size: .32rem;
+    line-height: .56rem;
+  }
+  .sub-title {
+    opacity: 0.56;
+    font-size: .24rem;
+  }
+}
+
+.player-ctrl-bar {
+  margin-top: .48rem;
+}
+
+.player-bar-progress {
+  position: relative;
+  opacity: 0.46;
+  background: $bar-progress-bg;
+  height: $bar-height;
+  top: $bar-padding + $bar-height;
+  .bar-progress-item {
+    opacity: 0.38;
+    background: $bar-progress-bg;
+    content: " ";
+    position: absolute;
+    display: inline-block;
+    height: $bar-height;
+  }
+}
+
+.player-bar-time {
+  .vue-slider-component {
+    padding: $bar-padding 0!important;
+  }
+  .vue-slider {
+    height: $bar-height!important;
+    background-color: transparent!important;
+    border-radius: 0px!important;
+  }
+  .vue-slider-dot {
+    width: $bar-dot-size!important;
+    height: $bar-dot-size!important;
+    top: 0!important;
+    bottom: 0;
+    margin: auto;
+    background: content-box $bar-dot-bg!important;
+    box-shadow: none!important;
+    border: .1rem solid transparent;
+  }
+  .vue-slider-process {
+    background-color: $bar-time-bg!important;
+  }
+}
+
+.player-hint-time {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.46;
+  font-size: .2rem;
+  color: #fff;
+  padding-bottom: .06rem;
+}
+
+.player-ctrl-button {
+  text-align: center;
+
+  .play, .pause {
+    content: " ";
+    display: inline-block;
+    width: 0.96rem;
+    height: 0.96rem;
+    background: url(~src/assets/images/mobile/player/play.png) no-repeat center/contain;
+    vertical-align: middle;
+  }
+
+  .pause {
+    background-image: url(~src/assets/images/mobile/player/pause.png);
+  }
+
+  .next, .prev {
+    content: " ";
+    display: inline-block;
+    width: 0.56rem;
+    height: 0.56rem;
+    background: url(~src/assets/images/mobile/player/next_btn.png) no-repeat center/contain;
+    vertical-align: middle;
+  }
+
+  .prev {
+    background-image: url(~src/assets/images/mobile/player/prev_btn.png);
+  }
+
+  .arrow-up, .arrow-down {
+    content: " ";
+    display: inline-block;
+    width: 0.36rem;
+    height: 0.36rem;
+    background: url(~src/assets/images/mobile/player/arrow_up.png) no-repeat center/contain;
+    vertical-align: middle;
+  }
+
+  .arrow-down {
+    background-image: url(~src/assets/images/mobile/player/arrow_down.png);
+  }
+
+  .close {
+    content: " ";
+    display: inline-block;
+    width: 0.36rem;
+    height: 0.36rem;
+    background: url(~src/assets/images/mobile/player/close.png) no-repeat center/contain;
+    vertical-align: middle;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

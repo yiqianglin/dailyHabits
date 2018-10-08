@@ -1,0 +1,429 @@
+@import '~src/assets/style/common-util';
+.container {
+  width: 7.5rem;
+  margin: 0 auto;
+  position: relative;
+  background: #f3f3f3;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.18rem;
+  * {
+    box-sizing: border-box;
+  }
+  ul,
+  li {
+    list-style-type: none;
+  }
+  /*--顶部筛选条件--*/
+  .filter-wrp {
+    position: fixed;
+    top: .88rem;
+    height: 1.3rem;
+    width: 100%;
+    z-index: 2;
+    .filter-top {
+      width: 100%;
+      height: 1.3rem;
+      background: #fff;
+      display: flex;
+      padding-right: .3rem;
+      padding-top: .3rem;
+      position: absolute;
+      z-index: 2;
+      .location-wrp {
+        width: 1.45rem;
+        color: #000000;
+        height: .7rem;
+        line-height: .7rem;
+        padding-left: .3rem;
+        position: relative;
+        font-size: .3rem;
+        &:after {
+          content: ' ';
+          width: .21rem;
+          height: .7rem;
+          display: block;
+          background: url("~src/assets/images/mobile/doctor_search/arrow-down.png") no-repeat left center;
+          background-size: contain;
+          position: absolute;
+          right: .22rem;
+          top: 0;
+        }
+        &.active {
+          &:after {
+            transform: scaleY(-1);
+          }
+        }
+      }
+      .search-wrp-top {
+        flex: 1;
+        background: #F4F4F4;
+        border-radius: .7rem;
+        height: .7rem;
+        line-height: .7rem;
+        text-align: center;
+        font-size: 0;
+        span {
+          line-height: .7rem;
+          padding-left: .42rem;
+          display: inline-block;
+          font-size: .26rem;
+          color: #B8BFC4;
+          @include setBackground('~src/assets/images/mobile/expenseCalculator/search.png',
+          transparent,
+          no-repeat,
+          left center,
+          .28rem);
+          background-position: left center;
+        }
+      }
+    }
+    .filter-bottom {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      bottom: 0;
+      transition: transform 200ms ease-out 0ms;
+      &.show {
+        transform: translate(0, 100%);
+      }
+      .filter-ul {
+        background: #fff;
+        .filter-li {
+          width: 100%;
+          height: 1rem;
+          line-height: 1rem;
+          color: #303135;
+          padding-left: .4rem;
+          font-size: .28rem;
+          position: relative;
+          &:not(:last-child):after {
+            @include setBottomLine(#e5e5e5,
+            .3rem);
+          }
+          &.selected {
+            color: #01A176;
+          }
+        }
+      }
+    }
+  }
+  /*--搜索结果--*/
+  .content-wrp {
+    background: #fff;
+    .remark {
+      font-size: .26rem;
+      color: #B8BFC5;
+      background: #f3f3f3;
+      padding: .3rem 0 .1rem .3rem;
+    }
+    .content-item-wrp {
+      width: 100%;
+      padding: .34rem 0;
+      position: relative;
+      display: flex;
+      align-items: start;
+      .img {
+        width: 1.6rem;
+        padding-left: .38rem;
+        img {
+          width: .9rem;
+          height: .9rem;
+          vertical-align: middle;
+          border-radius: 50%;
+        }
+      }
+      .detail {
+        font-size: 0;
+        flex: 1;
+        align-items: center;
+        margin-right: .3rem;
+        .name {
+          font-size: .32rem;
+          color: #000000;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 100%;
+          display: block;
+        }
+        .desc {
+          font-size: .28rem;
+          color: #b8bfc4;
+          margin: .2rem 0 .04rem;
+        }
+        .tag-ul {
+          display: block;
+          width: 100%;
+          margin-top: .1rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          .tag-li {
+            line-height: .36rem;
+            display: inline-block;
+            font-size: .22rem;
+            color: #01A176;
+            text-align: center;
+            padding: 0 0.2rem;
+            position: relative;
+            &:after {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              border-radius: 0.08rem;
+              border: 1px solid #01A176;
+              box-sizing: border-box;
+              width: 200%;
+              height: 200%;
+              transform: scale(.5);
+              transform-origin: left top;
+            }
+            &:not(:first-child) {
+              margin-left: .09rem;
+            }
+          }
+        }
+      }
+      &:not(:last-child):after {
+        @include setBottomLine(#e5e5e5,
+        .3rem);
+      }
+    }
+  }
+  .mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.56);
+    z-index: 1;
+  }
+  .paper {
+    background: #f3f3f3;
+  }
+  /*--提示词搜索面板--*/
+  .search-wrp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    background: #eef1f2;
+    display: flex;
+    flex-direction: column; // 顶部
+    .search-bar {
+      display: flex;
+      align-items: center;
+      position: relative;
+      background-color: #ffffff;
+      padding: 0 0.26rem;
+      height: 1rem;
+      max-height: 1rem;
+      &::after {
+        @include setBottomLine(#e3e6ea);
+      }
+      .search-input-wrapper {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        background-color: #f2f3f8;
+        border-radius: 1rem;
+        height: 0.6rem;
+        padding: 0 0.24rem;
+      }
+      .search-icon {
+        @include setBackground('~src/assets/images/mobile/search_new/search_btn.png');
+        background-position: left center;
+        height: 0.4rem;
+        padding-left: 0.5rem;
+      }
+      .stag {
+        background: #fff;
+        border-radius: 1rem;
+        max-width: 2rem;
+        margin-right: 0.18rem;
+        padding: 0 0.43rem 0 0.2rem;
+        font-size: 0.26rem;
+        color: #80888C;
+        line-height: 0.48rem;
+        position: relative;
+        &::before {
+          @include setOnePxBorder(#B8BFC4,
+          2rem);
+        }
+        .close {
+          @include setBackground('~src/assets/images/mobile/search_new/close.png');
+          height: 0.15rem;
+          width: 0.15rem;
+          position: absolute;
+          right: 0.16rem;
+          margin: auto;
+          top: 0;
+          bottom: 0;
+        }
+      }
+      form {
+        flex: 1;
+      }
+      input {
+        -webkit-appearance: none;
+        border: none;
+        outline: none;
+        text-align: left;
+        font-size: 0.26rem;
+        background-color: inherit;
+        width: 100%;
+        font-size: 0.3rem;
+        color: #0d0d0f;
+        &::-webkit-search-cancel-button {
+          display: none;
+        }
+      }
+      .del {
+        content: " ";
+        display: inline-block;
+        @include setBackground('~src/assets/images/mobile/search_new/del.png');
+        height: 0.32rem;
+        width: 0.32rem;
+      }
+      .del-img {
+        height: 0.32rem;
+        width: 0.32rem;
+      }
+      .cancel,
+      .search-btn {
+        font-size: 0.28rem;
+        color: #80888c;
+        margin-left: 0.26rem;
+        min-width: 0.6rem;
+      }
+      .search-btn {
+        color: #01a176;
+      }
+    } // 联想词
+    .search-smartbox {
+      flex: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    } // 搜索历史，联想词列表
+    .search-plain-list {
+      padding-top: .14rem;
+      color: #303435;
+      list-style: none;
+      background: #fff;
+      .item {
+        position: relative;
+        padding: 0.2rem 0.36rem;
+        font-size: 0.32rem;
+        color: #293132;
+        &:not(:last-child)::after {
+          @include setBottomLine(#e3e6ea,
+          0.36rem);
+        }
+        ul {
+          list-style: none;
+          font-size: 0;
+          white-space: normal;
+          @include setLineClamp(2);
+          padding-bottom: 0.01rem;
+          li {
+            display: inline-block;
+            margin-top: 0.12rem;
+            margin-right: 0.18rem;
+            padding: 0.06rem 0.1rem;
+            border: 1px solid #b8bfc4;
+            border-radius: 0.08rem;
+            font-size: 0.24rem;
+            color: #80888c;
+            @include ellipsis(2);
+          }
+        }
+        .name {
+          p {
+            @include ellipsis(7.5);
+          }
+        } // 命中标绿
+        /deep/ .match {
+          color: #01a176;
+        }
+        &.building {
+          // padding-right:1.28rem;
+          .name {
+            p {
+              max-width: 5.9rem;
+            }
+          }
+          .tag {
+            // margin: auto;
+            position: absolute;
+            top: 0.26rem; // bottom: 0;
+            right: 0.32rem;
+            height: 0.28rem;
+            font-size: 0.28rem;
+            line-height: 0.28rem;
+            color: #b8bfc4;
+          }
+        }
+        &.search-common-item {
+          @include setBackground('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAzpJREFUWAntV89rE0EUnrfZJtUQpXiyASEHETzYi9C6mJramt6sF/HmzYN48uSfIOLBkyf9B0QUe9OW0B+hoRVPHkQQKQqt6KW0IU1NN/t838Qt3WR3sintSffQzb73vm++eTPz3lSpf/2hOAkolz8O1N3qFJOaYsXnBTQIHCu1Too+EavpY3ZmOp+/sBGHb3+MUcDc3Gp/g37cV8wPZOCT+4Htv0XIpiJ6lOTTT8bGcjvt/qjvSAGlSiXrNvgNM19sgamkSL1I2rxIuwNrsHHfRrbh0qik4pZ8jcNGRB/sJN0YdxwdA5vpCRWgB//NKzLrrBB+IYvuFEedBRPRzGLlCnv8TASflWys2SkajiOiQ0Ar7etlPXOicjqRmYq7ttgrtWZ1WpYsj0wkeTDfbTms9llhzTE4Zt7L4OCBUGCABYfeP+0DtH0HMoAZbLvVVWw4K2EVuqW9jWvvE8vhNb15bMzjdiZnymAgA/qo6d1OpYMODhUtLJUwEXDuKQv5ERCAc65jZLeHxPZm+suxxxmBDgqQIoM4HLWI+Nhmn0OyoDmjgAEBsiF0hfPPeRQojt3n8DmjMAEBUUEHsbuZekLjmJomfEAAajuCUeFMoFi+WuOM5iL+ZooPCEBjQbAuryZUDB973jDCZAm+msKDAqSr6WBd202w7j6P6LaOIvXKFB0QgJaqu5o0FhQTE9Dke7ewdBXlWDrTVqbPem2KDQjQFUtaKgBoLKiMJnCYb3l5+YQM/hw+YnroOE49LM63BQTAiH6ORoKuhsbSiwjEbu24JWaVE473xcKlx/5AUe8OAehe6OdoqUjjdrO6Enc5al71pcdKGpm1ZtmpmyLCeAQhyg5Thj4ud4Jht6H0hYSbPP92bilwIUmlNpvpdNoaGhqq+Ryy48tylOVi4p3yXPec2L/7vqi3YKKfrlcyol1bNuxE4XIZLLJsNLNQeSrvu0RKrmX29cnCyGz0CPqYmtwtH9a281JKfeL9pZiKk2POZ5+lVxHGDPikvb57EXEkAiA4rogjExBXxJEK6BRB9UR/IjcxMvITPjyhx7DlOpy/UgtkNfje7Hxly1PqGtt27H9aDkfBf5YuGfgD0laSHnaGKYMAAAAASUVORK5CYII=');
+          background-position: 0.36rem center;
+          background-size: 0.32rem;
+          padding-left: 0.86rem;
+          @include ellipsis(5.8);
+          max-width: none;
+        }
+        &.search-history-item {
+          background: url("~src/assets/images/mobile/search_new/history.png") no-repeat 0.36rem center;
+          background-size: 0.32rem;
+          padding-left: 0.86rem;
+          @include ellipsis(5.8);
+          max-width: none;
+        }
+      }
+    } // 空样式
+    .empty-search,
+    .empty-result-list {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        text-align: center;
+        color: #80888c;
+        font-size: .32rem;
+      }
+    }
+  }
+}
+
+/** 弹窗动画*/
+
+.fadeIn-enter-active {
+  transition: all 0.2s ease-in-out;
+}
+
+.fadeIn-leave-active {
+  transition: all 0.2s ease-in-out;
+}
+
+.fadeIn-enter {
+  opacity: 0;
+}
+
+.fadeIn-enter-to {
+  opacity: 1;
+}
+
+.fadeIn-leave {
+  opacity: 1;
+}
+
+.fadeIn-leave-to {
+  opacity: 0;
+}

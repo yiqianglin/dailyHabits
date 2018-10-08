@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta itemprop="name" content="企鹅医典"/>
+  <meta itemprop="description" content="企鹅医典致力于向广大网友提供权威可信的医学知识，并提供易于理解的科普解读"/>
+  <meta itemprop="image" content="http://s.pc.qq.com/tdf/ydd/common_logo.png"/>
+  <title>企鹅医典</title>
+</head>
+
+<body>
+  <div id="app">
+  </div>
+
+  <script>
+    function loadError(e) {
+      function LoadError(message) {
+        this.name = 'LoadError'
+        this.message = message || 'Default Message'
+        this.stack = (new Error()).stack
+      }
+      LoadError.prototype = Object.create(Error.prototype)
+      LoadError.prototype.constructor = LoadError
+      //上报加载失败事件
+      window.Raven&&Raven.captureException(new LoadError(e.src + ' load failed'), {
+        level: 'warning'
+      })
+    }
+    function loadScript(obj) {
+      //排查script加载顺序及是否加载成功
+      console.log(obj.attributes['src'].nodeValue)
+    }
+
+    // flexible
+    (function (document, window) {
+      var docEl = document.documentElement,
+        event = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var size = 750;
+          var zoom = docEl.clientWidth / size;
+          // if(zoom > 1) docEl.style.fontSize = '100px';
+          // docEl.style.fontSize = 100 * zoom + 'px';
+          if (zoom > 1) {
+            docEl.style.fontSize = '100px';
+          } else {
+            docEl.style.fontSize = 100 * zoom + 'px';
+          }
+        };
+      if (!window.addEventListener) return;
+      window.addEventListener(event, recalc, false);
+      window.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+
+  </script>
+
+  <!-- <script onload="loadScript(this)" src="//s.pc.qq.com/tdf/baike/vue.js"></script> -->
+  <% if(_ENV_ !== 'production') { %>
+    <script onload="loadScript(this)" src="/dist/static/libs/vconsole.min.js"></script>
+  <% } %>
+
+  <% if(_ENV_ !== 'development') { %>
+    <script onload="loadScript(this)" crossorigin="anonymous" src="//s.pc.qq.com/tdf/baike/raven.report.vue.min.js"></script>
+  <% } %>
+  <% if(_ENV_ === 'testing') { %>
+    <script>
+      Raven.config('https://fe72e4b88b2e483887ebb6202f435fef@sentry.io/1225514').install({ // 优化？
+          environment: "<%= _ENV_  === 'production' ? 'production' : 'test' %>",
+          release: "<%- _VERSION_ %>"
+      })
+    </script>
+  <% } %>
+  <% if(_ENV_ === 'production') { %>
+    <script>
+      Raven.config('https://7493cb8cf62f46d9acd62071634a45f3@report.url.cn/sentry/29', {
+          environment: "<%= _ENV_  === 'production' ? 'production' : 'test' %>",
+          release: "<%- _VERSION_ %>",
+          whitelistUrls: [/baike.*\.qq.com/, /s\.pc\.qq\.com/]
+      }).install();
+    </script>
+  <% } %>
+
+
+  <script onload="loadScript(this)" onerror="loadError(this)" src="//s.pc.qq.com/tdf/baike/zepto.1.2.0.min.js"></script>
+  <!-- <script src="//vm.gtimg.cn/tencentvideo/txp/js/txplayer.js"></script> -->
+  <!-- <script src="//y.gtimg.cn/music/h5/player/player.js?max_age=2592000"></script> -->
+  <script onload="loadScript(this)" onerror="loadError(this)" src="//res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+  <script onload="loadScript(this)" onerror="loadError(this)" src="//jsapi.qq.com/get?api=app.setShareInfo"></script>
+  <script>
+    var _mtac = {
+      "performanceMonitor": 1,
+      "senseQuery": 1
+    };
+  </script>
+  <script onload="loadScript(this)" onerror="loadError(this)" src="//pingjs.qq.com/h5/stats.js?v2.0.4" name="MTAH5" sid="<%- _MTA_.sid %>" cid="<%- _MTA_.cid %>"></script>
+
+  <% if(_ENV_ === 'production') { %>
+    <script id="MTIMER" name="MTIMER" proj="7493cb8cf62f46d9acd62071634a45f3" env="production" mode="common" src="//s.pc.qq.com/tdf/med-timer.min.js"></script>
+  <% } %>
+</body>
+
+</html>

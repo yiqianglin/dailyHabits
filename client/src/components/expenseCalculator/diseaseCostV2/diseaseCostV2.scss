@@ -1,0 +1,454 @@
+@import "~src/assets/style/common-util";
+
+// 治疗费用
+.disease-cost-v2-wrp{
+    font-family: 'Microsoft YaHei';
+    * {
+        box-sizing: border-box;
+      }
+    flex: 1;
+    display: flex;
+    padding-top: 1.03rem;
+    ul, li {
+        list-style: none;
+    }
+    .expense-calculator {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+    }
+    .fontNum{
+        font-family: 'PingFangSC-Regular', sans-serif;
+    }
+    /* 顶部 */
+    .calculator-peper-top{
+        width: 7.06rem;
+        height: 3.13rem;
+        padding: .3rem .24rem .39rem .3rem;
+        margin: 0 auto 0;
+        background: url(~src/assets/images/mobile/expenseCalculator/card-bg.png) no-repeat center;
+        background-size: 100%;
+        border-radius: 0.08rem;
+        box-shadow: 0 0.03rem 0.07rem 0 rgba(216, 216, 216, 0.37);
+        position: relative;
+        color: #fff;
+        &.big {
+            height: 3.58rem;
+        }
+        .top {
+            display: flex;
+            align-items: center;
+            font-size: 0;
+            .name {
+                font-size: .4rem;
+                font-family: 'PingFangSC-Medium', 'Source Han Sans CN';
+                line-height: .42rem;
+                margin-right: .2rem;
+            }
+            .tag-ul {
+                display: inline-block;
+                flex: 1;
+                .tag-li {
+                    padding: 0.1rem 0.24rem;
+                    display: inline-block;
+                    position: relative;
+                    font-size: 0.24rem;
+                    line-height: 1;
+                    margin: 0 0.12rem 0 0;
+                    &:after {
+                      content: "";
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      border-radius: 0.12rem;
+                      border: 1px solid #fff;
+                      box-sizing: border-box;
+                      width: 200%;
+                      height: 200%;
+                      transform: scale(0.5);
+                      transform-origin: left top;
+                    }
+                }
+            }
+            .change-selection{
+                display: inline-block;
+                height: .42rem;
+                line-height: .42rem;
+                font-size: .28rem;
+                position: absolute;
+                padding-right: .55rem;
+                width: 1.1rem;
+                right: 0;
+                background: url(~src/assets/images/mobile/expenseCalculator/right-arrow-white.png) no-repeat center right .25rem;
+                background-size: .13rem auto;
+            }
+        }
+        .data-detail{
+            margin-top: .55rem;
+            .p1{
+                font-size: .28rem;
+                letter-spacing: .01rem;
+            }
+            .p2{
+                font-size: .68rem;
+                margin-top: .12rem;
+                .deviation-btn{
+                    background: rgba(255,255,255,0.2);
+                    font-size: .24rem;
+                    height: .38rem;
+                    line-height: .38rem;
+                    width: 1rem;
+                    padding-left: .4rem;
+                    position: relative;
+                    display: inline-block;
+                    margin-left: .12rem;
+                    border-radius: .04rem;
+                    vertical-align: top;
+                    margin-top: .43rem;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        width: .4rem;
+                        height: .38rem;
+                        display: block;
+                        background: url(~src/assets/images/mobile/expenseCalculator/deviation-btn.png) no-repeat center center;
+                        background-size: .27rem auto;
+                        top: 0;
+                        left: 0;
+                        border-radius: .04rem;
+                    }
+                }
+            }
+            .p3{
+                font-size: .28rem;
+                margin-top: .2rem;
+            }
+        }
+    }
+    /* 中部 */
+    .calculator-paper-middle{
+        width: 7.06rem;
+        flex: 1;
+        margin: .25rem auto 0;
+        background: #fff;
+        border-radius: 0.08rem;
+        box-shadow: 0 0.03rem 0.07rem 0 rgba(216, 216, 216, 0.37);
+        padding-bottom: .25rem;
+        .top{
+            padding: .3rem .24rem 0;
+            height: 1.18rem;
+            .title{
+                height: .42rem;
+                line-height: .42rem;
+                font-size: .32rem;
+                color: #303435;
+                display: inline-block;
+            }
+            .collapse{
+                width: 1.13rem;
+                height: .44rem;
+                display: block;
+                position: relative;
+                font-size: .28rem;
+                line-height: .44rem;
+                float: right;
+                color: #06BA8E;
+                text-align: left;
+                padding-left: .42rem;
+                background: url(~src/assets/images/mobile/expenseCalculator/collapse-01.png) no-repeat left .18rem center;
+                background-size: .14rem auto;
+                &:after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  border-radius: 0.12rem;
+                  border: 1px solid #06BA8E;
+                  box-sizing: border-box;
+                  width: 200%;
+                  height: 200%;
+                  transform: scale(0.5);
+                  transform-origin: left top;
+                }
+                &.close {
+                    background: url(~src/assets/images/mobile/expenseCalculator/collapse-02.png) no-repeat left .18rem center;
+                    background-size: .14rem auto; 
+                }
+            }
+            .remark{
+                display: block;
+                color: #B8BFC5;
+                font-size: .24rem;
+                margin-top: .12rem;
+            }
+        }
+        .frequency-selection-are{
+            // transition: all ease-out 0.2s;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            &.show{
+                max-height: 100%;
+                opacity: 1;
+            }
+            .selection-ul{
+                .selection-li{
+                    height: .96rem;
+                    line-height: .96rem;
+                    position: relative;
+                    .btn-link{
+                        padding: 0 .27rem;
+                        font-size: .28rem;
+                        color: #303435;
+                        padding-right: .58rem;
+                    }
+                    .item-decoration{
+                        display: inline-block;
+                        width: .2rem;
+                        height: .2rem;
+                        border-radius: .2rem;
+                    }
+                    .item-name{
+                        margin-left: .29rem;
+                    }
+                    .frequency{
+                        float: right;
+                        .avg-cost {
+                            margin-right: .3rem;
+                        }
+                        .num {
+                            margin-right: .12rem;
+                            width: .86rem;
+                            display: inline-block;
+                            text-align: right;
+                            color:#01A176;
+                        }
+                        .gray{
+                            margin-right: .12rem;
+                            display: inline-block;
+                            text-align: right;
+                            color:#80888C;
+                        }
+                    }
+                    .right-arrow{
+                        width: .58rem;
+                        height: 100%;
+                        background: url(~src/assets/images/mobile/expenseCalculator/right-arrow.png) no-repeat right .23rem center;
+                        background-size: .12rem auto;
+                        position: absolute;
+                        right: 0;
+                    }
+                    .other-count{
+                        position: absolute;
+                        right: .22rem;
+                        top: 0;
+                    }
+                }
+            }
+        }
+        .ve-pie-area {
+            width: 100%;
+            height: 5.2rem;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            transition: opacity linear 0.5s;
+            opacity: 0;
+            &.show{
+                opacity: 1;
+            }
+            .ve-pie-area-inner{
+                flex: 1;
+                max-height: 5.2rem;
+                height: 5.2rem;
+            }
+            .data-empty {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(255, 255, 255, 0.7);
+                color: #888;
+                font-size: 0.28rem;
+            }
+        }
+    }
+    /* 底部 */
+    .calculator-paper-footer{
+        width: 7.06rem;
+        margin: .25rem auto 0;
+        background: #fff;
+        border-radius: 0.08rem;
+        box-shadow: 0 0.03rem 0.07rem 0 rgba(216, 216, 216, 0.37);
+        padding-top: .4rem;
+        .top{
+            font-size: .32rem;
+            padding: 0 .24rem;
+            color: #303435;
+            margin-bottom: .25rem;
+            .num{
+                float: right;
+            }
+            .zero{
+                color: #80888C;
+            }
+            .remark{
+                font-size: .28rem;
+                color: #80888C;
+                float: right;                
+            }
+        }
+        .selection{
+            position: relative;
+            line-height: .94rem;
+            height: .94rem;
+            color: #80888C;
+            font-size: .28rem;
+            .btn-link{
+                padding-right: .52rem;
+                padding-left: .24rem;
+            }
+            .selection-value{
+                float: right;
+            }
+            .right-arrow{
+                width: .52rem;
+                height: 100%;
+                background: url(~src/assets/images/mobile/expenseCalculator/right-arrow.png) no-repeat right .23rem center;
+                background-size: .12rem auto;
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+    /* remark */
+    .bottom-remark{
+        font-size: 0.22rem;
+        color: #b8bfc4;
+        text-align: center;
+        margin-top: 0.6rem;
+        padding-bottom: .6rem;
+        p{
+            margin-bottom: .1rem;
+            &:nth-last-of-type(1) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // 弹窗
+    .pop-wrp {
+        position: fixed;
+        z-index: 4;
+        .mask {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.56);
+            z-index: 1;
+        }
+        // 筛序条件 内部content
+        .filter-panel-content {
+        }
+        // 反馈 内部content
+        .feedback-panel-content{
+            padding: 0 .3rem .3rem;
+            .title {
+                padding: .4rem 0 .3rem;
+                font-size: #000000;
+                font-weight: 700;            
+            }
+            .fast-choice{
+                font-size: #000000;                
+                .fast-choice-ul {
+                    font-size: 0;
+                    .fast-choice-li {
+                        display: inline-block;
+                        width: 2.22rem;
+                        height: .9rem;
+                        line-height: .9rem;
+                        background: #F7F7F7;
+                        border-radius: .08rem;
+                        font-size: .28rem;
+                        margin: .12rem .12rem 0 0;
+                        text-align: center;
+                        position: relative;
+                        border: 1px solid #F7F7F7;
+                        &:nth-of-type(-n + 3) {
+                            margin-top: 0;
+                        }
+                        &:nth-of-type(3n) {
+                            margin-right: 0;
+                        }
+                        &.active {
+                            border: 1px solid #46CBAB;
+                            background: rgba(70,203,171,0.20);
+                        }
+                    }
+                }
+            }
+            .input-wrp {
+                width: 6.9rem;
+                height: .9rem;
+                display: flex;
+                position: relative;
+                border: 1px solid #B8BFC5;
+                box-sizing: content-box;
+                justify-content: space-between;
+                align-items: center;
+                .input {
+                    width: 3rem;
+                    font-size: .28rem;
+                    padding: .31rem .12rem;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    border: 0;
+                    outline: 0;
+                    color: #000000;
+                    height: .9rem;
+                    box-sizing: border-box;
+                    &.min-input{
+                        text-align: left;
+                        padding-left: .9rem;
+                    }
+                    &.max-input{
+                        text-align: left;
+                        padding-left: 1.4rem;
+                    }
+                }
+                .separator {
+                    line-height: .9rem;
+                    font-size: .38rem;
+                    text-align: center;
+                    flex: .53rem 0 0;
+                }
+            }
+            .sure-btn{
+                display: block;
+                width: 100%;
+                height: .9rem;
+                line-height: .9rem;
+                background: #D8D8D8;
+                border-radius: .08rem;
+                color: #fff;
+                font-size: .32rem;
+                text-align: center;
+                margin: .4rem auto 0;
+                position: relative;
+                font-weight: 700;
+                letter-spacing: .06rem;
+                &.active{
+                    background-image: linear-gradient(-134deg, #00C79B 0%, #0DB6A4 100%);
+                }
+            }
+        }
+    }
+}

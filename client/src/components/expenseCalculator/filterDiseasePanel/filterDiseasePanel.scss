@@ -1,0 +1,91 @@
+@import "~src/assets/style/common-util";
+
+.filter-disease-content {
+    * {
+        box-sizing: border-box;
+    }
+    padding: 0.42rem 0.32rem 0.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .disease-selection {
+      position: relative;
+      font-size: 0.3rem;
+      width: 3.38rem;
+      height: 1.62rem;
+      background: #fff0e8;
+      color: #464646;
+      border-radius: 0.06rem;
+      margin-bottom: 0.12rem;
+      border: 0.01rem solid transparent;
+      display: flex;
+      align-items: center;
+      &.update {
+        background: #efefef;
+        .disease-img {
+          width: 1.16rem;
+          height: auto;
+          line-height: 1.62rem;
+          right: 0.22rem;
+        }
+      }
+      &.selected {
+        // border: 0.01rem solid #ffdfd9;
+      }
+      &.unselectable {
+        background: #efefef
+      }
+      .wrp{
+        padding-left: .28rem;
+        .disease-name{
+            display: block;
+        }
+        .status {
+            display: block;
+            font-size: .24rem;
+            line-height: .33rem;
+            color: rgba(70,70,70,0.28);
+        }
+      }
+      .disease-img {
+        position: absolute;
+        height: 1.63rem;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      visibility: hidden;
+    }
+  }
+
+/** 弹窗动画*/
+.fadeIn-enter-active {
+    transition: all 0.3s ease-in-out;
+}
+.fadeIn-leave-active {
+    transition: all 0.3s ease-in-out;
+}
+.fadeIn-enter {
+    transform: translateY(20%);
+    opacity: 0;
+}
+.fadeIn-enter-to {
+    transform: translateY(0);
+    opacity: 1;
+}
+.fadeIn-leave {
+    transform: translateY(0);
+    opacity: 1;
+}
+.fadeIn-leave-to {
+    transform: translateY(20%);
+    opacity: 0;
+}

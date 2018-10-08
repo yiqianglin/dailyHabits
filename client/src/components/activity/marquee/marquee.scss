@@ -1,0 +1,31 @@
+
+.marquee-container {
+  position: relative;
+  height: .56rem;
+  overflow: hidden;
+  .marquee-wrapper {
+    line-height: .6rem;
+    white-space: nowrap;
+    &.rolling {
+      animation: marquee 10s linear infinite;
+    }
+  }
+
+  .marquee-slide {
+    font-size: .24rem;
+    color: #4A4A4A;
+    &:not(:first-child) {
+      margin-right: .24rem;
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(100%);
+  }
+
+  100% {
+    transform: translate(-150%);
+  }
+}

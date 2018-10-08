@@ -1,0 +1,66 @@
+@import '~src/assets/style/common-util';
+.container {
+  background: #f8fbfb;
+  width: 7.5rem;
+  margin: 0 auto;
+  font-size: .28rem;
+  color: #80888c;
+}
+
+.logo{
+  margin: 2.4rem auto .9rem auto;
+  width: 2.36rem;
+  height: 2.36rem;
+  background: url(~src/assets/images/mobile/user/unbind/logo.png) no-repeat center;
+  background-size: contain;
+}
+
+.phone{
+  text-align: center;
+  font-size: .36rem;
+}
+
+.btn-unbind{
+  display: block;
+  margin: .7rem auto .2rem auto;
+  text-align: center;
+  width: 5.53rem;
+  height: .76rem;
+  line-height: .76rem;
+  border-radius: .38rem;
+  font-size: .32rem;
+  color: #03b98c;
+  border: 0.015rem solid #03b98c;
+}
+
+//弹出框，后面设计成组件
+.alert{
+  margin: auto;
+  width: 2.6rem;
+  height: 2.6rem;
+  position: absolute;
+  top: 0;left: 0;right: 0;bottom: 0;
+  font-size: .34rem;
+  background: rgba(96, 106, 107, .9);
+  border-radius: .3rem;
+  box-shadow: 0 0 0.36rem rgba(0, 0, 0, 0.4);
+  transition:all 0.5s linear;
+  visibility:hidden;
+  opacity:0;
+  &.show{
+    visibility:visible;
+    opacity:1;
+  }
+  .icon{
+    display: block;
+    width: .75rem;
+    height: .51rem;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAAzCAMAAADo4QV0AAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAzxOYAQmsvgb5oOGQEQR04cts4wAAAKdJREFUSMft0jsSwzAIRVEnNoqQP2H/q407itfEcyl1e53RAEtF23ffD6uh1rgbdVS4lVERVke1Our1ntSkJjWpv6hrq6LO5n70ml+1uGu9grKIxODYzRPDGxyRGD0G+yQGKMEApRigFAOUYoBSDFCKAUoxQCkGKMUApRigFAOUYoBSTCiCCUUwoQAmFMCEAlhSGEsKY0lxLCmOJcWx1X2cS1FXf/jgB54GIztBWh+UAAAAAElFTkSuQmCC);
+    background-size: contain;
+    margin: .75rem auto .3rem auto;
+  }
+  .msg{
+    color:#fff;
+    text-align: center;
+  }
+}

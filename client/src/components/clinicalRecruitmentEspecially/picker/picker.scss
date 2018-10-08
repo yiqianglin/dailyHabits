@@ -1,0 +1,71 @@
+@import "~src/assets/style/common-util";
+
+.mint-popup-picker {
+    *{
+        box-sizing: border-box;
+    }
+    width: 100%;
+    .picker-slot-wrapper, .picker-item {
+      backface-visibility: hidden;
+    }
+    /deep/ .picker-toolbar {
+        height: 1.06rem;  
+    }
+    .picker-header{
+        height: 1.06rem;
+        line-height: 1.06rem;
+        position: relative;
+        font-size: .32rem;
+        text-align: center;
+        &:after{
+            @include setBottomLine(#E5E5E5)
+        }
+        .cancel{
+            width: 1.2rem;
+            height: 100%;
+            display: block;
+            position: relative;
+            text-align: center;
+            float: left;
+            color: #545A58;
+        }
+        .title{
+            max-width: 3.6rem;
+            display: inline-block;
+            color: #000000;
+        }
+        .sure{
+            width: 1.2rem;
+            height: 100%;
+            display: block;
+            position: relative;
+            text-align: center;
+            float: right;
+            color: #01A176;
+        }
+    }
+}
+
+/** 弹窗动画*/
+.fadeIn-enter-active {
+    transition: all 0.3s ease-in-out;
+}
+.fadeIn-leave-active {
+    transition: all 0.3s ease-in-out;
+}
+.fadeIn-enter {
+    transform: translateY(20%);
+    opacity: 0;
+}
+.fadeIn-enter-to {
+    transform: translateY(0);
+    opacity: 1;
+}
+.fadeIn-leave {
+    transform: translateY(0);
+    opacity: 1;
+}
+.fadeIn-leave-to {
+    transform: translateY(20%);
+    opacity: 0;
+}

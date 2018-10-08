@@ -1,0 +1,185 @@
+@import '~src/assets/style/common-util';
+
+@mixin setOnePx($borderColor,$borderRadius){
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid $borderColor;
+    border-radius: $borderRadius;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    transform-origin: left top;
+}
+
+.container {
+    background: #f9fafa;
+}
+
+.header {
+    max-width: 7.5rem;
+    margin: 0 auto;
+    padding: .88rem .28rem .12rem;
+    .title {
+        margin: .72rem 0 .56rem;
+        text-align: center;
+        font-size: .40rem;
+        font-weight: 500;
+        color: #06BA8E;
+    }
+    .description {
+        font-size: .26rem;
+        color: #B8BFC4;
+        margin-bottom: .32rem;
+    }
+    .tags {
+        list-style: none;
+        font-size: 0;
+        padding: .16rem 0 0;
+        border-top: .01rem solid #E3E6EA;
+        &:first-of-type {
+            border-top: none;
+        }
+        li {
+            display: inline-block;
+            margin: 0 .16rem .16rem 0;
+            padding: 0 .23rem;
+            height: .56rem;
+            line-height: .56rem;
+            font-size: .26rem;
+            color: #80888C;
+            // border: .01rem solid #b8bfc4;
+            // border-radius: 1rem;
+            position: relative;
+            &::after {
+                @include setOnePx(currentColor, 2rem);
+            }
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+            // white-space: nowrap;
+            text-align: center;
+            &:last-child {
+                margin-right: 0;
+            }
+            &.active {
+                // background: rgba(6,186,142,0.08);
+                border-color: #06BA8E;
+                color: #06BA8E;
+                &::after {
+                    background: rgba(6,186,142,0.08);
+                }
+            }
+        }
+    }
+    .stage-list {
+        padding: .16rem 0 0;
+        border-bottom: .01rem solid #E3E6EA;
+    }
+    .kind-list {
+        padding: .16rem 0 0;
+    }
+}
+
+.list {
+    max-width: 7.5rem;
+    margin: 0 auto;
+    padding: 0 .28rem;
+    .item {
+        padding: .28rem 0 .36rem;
+        border-bottom: .01rem solid #E3E6EA;
+        .title {
+            font-size: .30rem;
+            color: #303435;
+            line-height: .43rem;
+            margin-bottom: .08rem;
+        }
+    }
+    .tags {
+        list-style: none;
+        font-size: 0;
+        padding: .01rem 0;
+        word-break: break-all;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        li {
+            display: inline-block;
+            margin: 0 .12rem 0 0;
+            height: .4rem;
+            line-height: .4rem;
+            padding: 0 .1rem;
+            // border: .01rem solid #b8bfc4;
+            // border-radius: .08rem;
+            position: relative;
+            &::after {
+                @include setOnePx(#b8bfc4, .16rem);
+            }
+            font-size: .26rem;
+            color: #b8bfc4;
+            // max-width: 2rem;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+            // white-space: nowrap;
+            &.active {
+                // background: rgba(6,186,142,0.08);
+                // border-color: #06BA8E;
+                color: #06BA8E;
+            }
+        }
+    }
+}
+
+.empty {
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.32rem;
+    color: #b9c0cb;
+}
+
+.loading {
+    font-size: 0.24rem;
+    color: #B8BFC4;
+    text-align: center;
+    padding: 0.3rem 0;
+}
+
+.dotting {
+    font-size: 0;
+    vertical-align: middle;
+
+    i {
+        height: 0.08rem;
+        width: 0.08rem;
+        border-radius: 0.04rem;
+        margin-right: 0.12rem;
+        background-color: #B8BFC4;
+        display: inline-block;
+        opacity: 0;
+        vertical-align: middle;
+
+        &:nth-child(1) {
+            animation: dot 1.5s -1s infinite step-start both;
+        }
+
+        &:nth-child(2) {
+            animation: dot 1.5s -.5s infinite step-start both;
+        }
+
+        &:nth-child(3) {
+            animation: dot 1.5s 0s infinite step-start both;
+        }
+    }
+}
+@keyframes dot {
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

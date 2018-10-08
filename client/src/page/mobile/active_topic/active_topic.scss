@@ -1,0 +1,265 @@
+@import '~src/assets/style/common-util.scss';
+$page-pd: .3rem;
+$block-pd: .28rem;
+$block-shadow: 0 0.06rem 0.08rem 0 rgba(227, 228, 228, .60);
+.container {
+  width: 7.5rem;
+  background: #fdfdfd;
+}
+
+.cancer-nav {
+  padding: .2rem .36rem .2rem .28rem;
+  display: flex;
+  background: #FFFFFF;
+  align-items: center;
+  .search {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    flex: 1;
+    height: .56rem;
+    border-radius: 1rem;
+    font-size: 0.24rem;
+    color: #B8BFC4;
+    background: url(~src/assets/images/mobile/home_cancer/search.png) #F7F7F8 no-repeat 0.22rem center;
+    background-size: 0.36rem 0.36rem;
+    padding-left: .65rem;
+  }
+  .back {
+    width: .36rem;
+    height: .36rem;
+    background: {
+      image: url(~src/assets/images/mobile/tmenu/back.png);
+      repeat: no-repeat;
+      position: center;
+      size: contain;
+    }
+    margin-right:.26rem;
+  }
+  .my {
+    background: url(~src/assets/images/mobile/home_cancer/my.png) no-repeat center/contain;
+    height: .36rem;
+    width: .36rem;
+    margin-left: .26rem;
+  }
+}
+
+.cancer-activity {
+  margin: 0 0 -1rem;
+  /deep/ img {
+    height: 3.9rem !important;
+  }
+}
+
+.video-list {
+  padding: 0 $page-pd;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .video-item {
+    width: 3.34rem;
+    position: relative;
+    &:first-child {
+      width: 100%;
+      margin-bottom: .5rem;
+      .video-cover {
+        height: 3.94rem;
+      }
+      .video-info {
+        .title {
+          font-size: .36rem;
+          padding-top: .28rem;
+        }
+      }
+    }
+  }
+  .video-cover {
+    height: 2.18rem;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border-radius: .1rem;
+    img {
+      height: 100%;
+      /* width: 100%; */
+    }
+    .video-duration {
+      position: absolute;
+      bottom: .14rem;
+      right: .14rem;
+      font-size: .18rem;
+      color: #fff;
+      background: rgba(0, 0, 0, .1);
+      border-radius: 1rem;
+      padding: .075rem .1rem;
+      text-align: center;
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        width: .08rem;
+        height: .09rem;
+        margin: -0.05rem .05rem 0 0;
+        background: url(~src/assets/images/mobile/home/triangle.png) no-repeat center/contain;
+      }
+    }
+    .video-play {
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: .91rem;
+      height: .91rem;
+    }
+  }
+  .video-info {
+    .title {
+      padding: .08rem 0;
+      font-weight: $font-medium;
+      font-size: .28rem;
+      color: #303435;
+    }
+    .desc {
+      font-size: .28rem;
+      color: rgba($color: #000000, $alpha: .3);
+    }
+    .name {
+      font-size: .26rem;
+      color: #404040;
+      margin-right: .1rem;
+    }
+    .disease {
+      font-size: .26rem;
+      color: #b8bfc4;
+      height: .36rem;
+      line-height: .36rem;
+      padding: 0 .1rem;
+      position: relative;
+      &:after {
+        @include setOnePxBorder(#CCD1D5, .08rem);
+      }
+    }
+  }
+}
+
+.cancer-block {
+  .block-header {
+    margin: .8rem $page-pd 0;
+    font-size: .4rem;
+    font-weight: $font-medium;
+    color: rgba($color: #000000, $alpha: .87);
+    background: url(~src/assets/images/mobile/cancer/topic_title.png) no-repeat left bottom;
+    background-size: 1.32rem .28rem;
+  }
+}
+
+.story-list {
+  padding: 0 $page-pd;
+  margin: .1rem 0 0;
+  .story-item {
+    border-radius: .1rem;
+    overflow: hidden;
+    background: #fff;
+    margin: .3rem 0 0;
+    box-shadow: $block-shadow;
+    .header {
+      width: 100%;
+      height: 4.03rem;
+      position: relative;
+      background: no-repeat center/cover;
+      .title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1.79rem;
+        font-size: .36rem;
+        color: #fff;
+        padding: .18rem $block-pd;
+        background: url(~src/assets/images/mobile/cancer/mask.png) repeat-x center/contain;
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+    .content {
+      padding: .4rem $block-pd 0;
+      font-size: .3rem;
+      line-height: .48rem;
+      color: rgba($color: #000000, $alpha: .7);
+      .md>:nth-child(3) {
+        margin-bottom: 0;
+      }
+      .md>:nth-child(n+4) {
+        display: none;
+      }
+    }
+    .more {
+      text-align: right;
+      padding: .3rem $block-pd;
+      position: relative;
+      font-size: .3rem;
+      color: #06ba8e;
+    }
+  }
+}
+
+.doc-list {
+  margin: .28rem 0 0;
+  /deep/ .paper {
+    .loading {
+      display: none;
+    }
+  }
+  .more {
+    position: relative;
+    padding: .34rem 0;
+    font-size: .28rem;
+    text-align: center;
+    color: #0EBC92;
+    &::before {
+      @include setBottomLine($border-color, $page-pd, $page-pd);
+      top: 0;
+    }
+  }
+}
+
+.cancer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 $page-pd;
+  margin: .2rem 0;
+  .cancer-item {
+    display: flex;
+    width: 3.34rem;
+    padding: 0 0 0 .32rem;
+    margin: .11rem 0;
+    box-sizing: border-box;
+    border-radius: .1rem;
+    position: relative;
+    background: #F6F9F8;
+    .info {
+      flex: 1;
+      padding: .2rem 0;
+      margin-right: 1.58rem;
+      .name {
+        color: #0D0D0F;
+        font-size: .32rem;
+        line-height: .44rem;
+      }
+      .desc {
+        color: #B8BFC4;
+        margin-top: .02rem;
+        font-size: .24rem;
+        line-height: .36rem;
+      }
+    }
+    img {
+      width: 1.58rem;
+      position: absolute;
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,270 @@
+@import '~src/assets/style/common-util';
+@mixin setBackground($url) {
+  background: {
+    image: url($url);
+    repeat: no-repeat;
+    position: center;
+    size: contain;
+  }
+}
+
+.container {
+  background: #F3F3F3;
+  width: 7.5rem;
+  margin: 0 auto;
+  padding-top:.88rem;
+  overflow-x:hidden;
+}
+.authority_wm {
+  padding-bottom:.28rem;
+  header {
+    text-align: center;
+    font-size: 0;
+    padding: 1.18rem  0;
+    background: {
+      color: #FFFFFF;
+      image: url(~src/assets/images/mobile/authority_wm/webmd_logo-bg.png);
+      repeat: no-repeat;
+      position: center;
+      size: cover;
+    }
+    .logo {
+      height: .88rem;
+      width: 3.8rem;
+      display: block;
+      margin: 0 auto;
+    }
+    .name-title {
+      color: #0d0d0f;
+      font-weight: 700;
+      font-size: .4rem;
+      line-height: .37rem;
+      height: .37rem;
+      margin: .27rem 0 .23rem;
+    }
+    .name-info{
+      margin-top:.3rem;
+      text-align:center;
+      font-size:0;
+      .title{
+        font-size:.24rem;
+        line-height:.34rem;
+        color: #4A4B4C;
+      }
+      .desc{
+        display:inline-block;
+        position:relative;
+        margin-top:.14rem;
+        font-size:.24rem;
+        color: #80888C;
+        line-height:.34rem;
+        &:before{
+          @include setBottomLine(#7D7F82,-.04rem,-.04rem);
+          top:-.1rem;
+        }
+      }
+    }
+    // .name-desc {
+    //   color: #4A4B4C;
+    //   font-size: .24rem;
+    //   line-height: .46rem;
+    //   margin-top:.2rem;
+    // }
+    .view-more {
+      color: #06ba8e;
+      font-size: .28rem;
+      line-height: .28rem;
+      margin: .35rem 0 .22rem;
+      img {
+        width: 0.13rem;
+        height: 0.25rem;
+        margin-left: .16rem;
+        margin-top: -.04rem;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .items {
+    .item {
+      background-color:#FFFFFF;
+      padding:0rem 0 .4rem .38rem;
+
+      &:first-child{
+        padding-top: .45rem;
+      }
+
+      img{
+        display: block;
+        margin-left: -.32rem;
+        height: 2.87rem;
+        margin-top: .36rem;
+      }
+      /* margin-bottom:.1rem; */
+
+      .content{
+        color: #4A4B4C;
+        font-size: .28rem;
+        margin-top: .24rem;
+        line-height: .46rem;
+        padding-right: .32rem;
+        text-align: justify;
+      }
+      .desc.collapse{
+        @include setLineClamp(2);
+      }
+    }
+  }
+
+  .items .title, .webmd-article .header{
+    line-height: .36rem;
+    font-weight: 700;
+    font-size: .34rem;
+    color: #0d0d0f;
+    margin-left: -.4rem;
+    &:before{
+      content:" ";
+      display: inline-block;
+      width: .12rem;
+      height:.36rem;
+      background-color: #0080C5;
+      vertical-align: bottom;
+      margin-right: .2rem;
+      // border-top-right-radius: 2px;
+      // border-bottom-right-radius: 2px;
+    }
+  }
+  .exclusive-content{
+    margin-top:.28rem;
+    padding-top:.48rem;
+    background: #FEFEFE;
+    box-shadow: 0 .06rem .08rem 0 rgba(227,228,228,0.60);
+    .title{
+      text-align:center;
+      .name{
+        font-size:.36rem;
+        color: #0D0D0F;
+      }
+      .desc{
+        margin-top:.1rem;
+        font-size:.24rem;
+        color: #B8BFC4;
+        letter-spacing: .02rem;
+      }
+    }
+    .num-list{
+      display:flex;
+      flex-flow: wrap;
+      padding:.52rem 0 .6rem 0;
+      position:relative;
+      &:after{
+        @include setBottomLine(#E0E4E7);
+      }
+      .item{
+        width:50%;
+        text-align:center;
+        font-size:0;
+        position:relative;
+        padding:.1rem 0;
+        &:nth-child(odd):after{
+            @include setRightLine(#E0E4E7);
+        }
+        .info{
+          display:inline-block;
+          color:#06BA8E;
+          .num{
+            font-size:.9rem;
+            font-weight:700;
+            vertical-align: middle;
+          }
+          .desc{
+            display:inline-block;
+            margin-left:.16rem;
+            font-size:.26rem;
+            line-height:.44rem;
+            text-align:left;
+            vertical-align: middle;
+          }
+        }
+        
+      }
+    }
+    .list{
+      list-style:none;
+      li{
+          display:flex;
+          align-items:center;
+          padding:0 .42rem 0 .52rem;
+          height:1.28rem;
+          box-sizing:border-box;
+          position:relative;
+          &:after{
+            @include setBottomLine(#E0E4E7);
+          }
+          p{
+            flex:1;
+            font-size:.34rem;
+            color: #0D0D0F;
+          }
+          .num{
+              padding-right:.28rem;
+              font-size:.24rem;
+              color: #06BA8E;
+              line-height:.32rem;
+              position:relative;
+              background:{
+                image:url(~src/assets/images/mobile/authority_wm/arrow.png);
+                repeat: no-repeat;
+                position: right center;
+                size: .12rem .2rem;
+              }
+              &:after{
+                // @include arrow(.1rem,currentColor);
+                // margin-top:-.08rem;
+              }
+          }
+      }
+    }
+    .more-disease{
+      padding:.34rem 0;
+      font-size:.28rem;
+      color: #80888C;
+      line-height:.32rem;
+      text-align:center;
+      position:relative;
+    }
+  }
+}
+.webmd-article{
+  margin-top: .1rem;
+  padding-top: .35rem;
+  .header{
+    padding: 0 0 .55rem .32rem;
+  }
+}
+.authority_wm.xcx{
+  margin-top: -0.88rem;
+}
+
+.footer {
+  height: 1rem;
+  line-height: 1rem;
+  font-size: .28rem;
+  text-align: center;
+  color: #80888c;
+  position: relative;
+  background-color: #FFFFFF;
+  &:before{
+    @include setBottomLine(#E0E4E7);
+    top:0;
+  }
+  // padding-bottom: .56rem;
+  img{
+    width: .25rem;
+    height: .13rem;
+  }
+}
+
+.webmd-article{
+  background-color: #FFF;
+}

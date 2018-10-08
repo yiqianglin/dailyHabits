@@ -1,0 +1,96 @@
+@import "~src/assets/style/common-util";
+
+.dialog-wrp{
+    * {
+        box-sizing: border-box;
+    }
+    .mask{
+        background: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        z-index: 4;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .dialog-panel{
+        background: #fff;
+        height: 3.8rem;
+        width: 6.62rem;
+        border-radius: .08rem;
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        // top: 45%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        z-index: 5;
+        .dialog-content{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding-bottom: .96rem;
+            text-align: center;
+            .dialog_head{
+                // .header {
+                    font-size: .39rem;
+                    color: #000000;
+                    font-weight: 700;
+                    padding-top: .62rem;
+                // }
+            }
+            .dialog_main{
+                // .main{
+                    color: #3F3F42;
+                    font-size: .28rem;
+                    margin-top: .38rem;
+                // }
+            }
+            .dialog_confirm_btn_wrp {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                .btn-wrp {
+                    width: 100%;
+                    display: flex;
+                    a {
+                        flex: 1;
+                        height: .82rem;
+                        line-height: .82rem;
+                        font-size: .32rem;
+                        text-align: center;
+                        @include setTouchBackground; 
+                    }
+                    .cancel-btn {
+                        color: #80888C;
+                        background: #eff1f2;
+                    }
+                    .sure-btn {
+                        color: #fff;
+                        background-image: linear-gradient(-133deg, #00C79B 0%, #0DB6A4 100%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** 弹窗动画*/
+.drop-enter-active {
+    transition: all 0.3s ease-in-out;
+  }
+  .drop-leave-active {
+    // transition: all 0.2s ease-in-out;
+  }
+  .drop-enter {
+    transform: translateY(-20%);
+  }
+  .drop-leave-active {
+    transform: translateY(-20%);
+  }

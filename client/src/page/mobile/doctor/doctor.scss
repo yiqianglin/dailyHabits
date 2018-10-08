@@ -1,0 +1,710 @@
+@import '~src/assets/style/common-util';
+$page-bg: #eaeff2;
+$block-bg: #fff;
+$border-color: #e3e6ea;
+.container {
+  background: $page-bg;
+  width: 7.5rem;
+  margin: 0 auto;
+  position: relative;
+  padding-top: .88rem;
+  .checkDoctorExpressway {
+    width: 5.76rem;
+    height: .86rem;
+    line-height: .86rem;
+    margin: 0 auto;
+    position: fixed;
+    background-image: linear-gradient(90deg, #00c79b 0%, #0db6a4 100%);
+    border-radius: .08rem;
+    left: 50%;
+    bottom: .4rem;
+    text-align: center;
+    font-size: .32rem;
+    color: #fff;
+    font-weight: 700;
+    z-index: 1;
+    transform: translate(-50%, 0)
+  }
+}
+
+.md {
+  p {
+    text-align: left;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ol,
+  ul {
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.forte {
+  padding: 0.6rem 0.32rem;
+  font-size: 0.34rem;
+  color: #3e464a;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 0.56rem;
+  /*max-height: 1.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;*/
+  -webkit-box-orient: vertical;
+  .fix-text {
+    font-size: 0.34rem;
+    border: 1px solid transparent;
+    border-radius: 0.08rem;
+    padding: 0.05rem;
+    margin-right: 0.1rem;
+    margin-bottom: 0.1rem;
+  }
+  span {
+    display: inline-block;
+    line-height: 100%;
+  }
+  span.tag-text {
+    //  float: left;
+    font-size: 0.3rem;
+    border: 1px solid #B8BFC4;
+    border-radius: 0.08rem;
+    padding: 0.05rem;
+    margin-right: 0.1rem;
+    margin-bottom: 0.1rem;
+  }
+}
+
+.introductions,
+.officeTime,
+.qualifications {
+  padding: 0.6rem 0.32rem;
+  .header {
+    font-size: 0.4rem;
+    color: #0fa371;
+    margin-bottom: 0.6rem;
+    img {
+      height: 0.34rem;
+    }
+  }
+  .content {
+    font-size: 0.34rem;
+    line-height: 0.58rem;
+    color: #3e464a;
+  }
+}
+
+.qualifications {
+  .header {
+    margin-bottom: 0.49rem;
+  }
+  .content {
+    text-overflow: ellipsis;
+    overflow: hidden; // line-height: 0.58rem;
+    // max-height: 3.48rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.officeTime {
+  .item {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.2rem;
+  }
+}
+
+.introductions {
+  .header {
+    margin-bottom: 0.49rem;
+  }
+  &.collapse .content {
+    text-overflow: ellipsis;
+    overflow: hidden; // line-height: 0.58rem;
+    // max-height: 1.74rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.footer {
+  height: 0.88rem;
+  line-height: 0.88rem;
+  font-size: 0.28rem;
+  color: #80888c;
+  text-align: center;
+  position: relative;
+  img {
+    width: 0.25rem;
+    height: 0.13rem;
+    margin-left: 0.2rem;
+  }
+}
+
+.normal {
+  .forte,
+  .introductions {
+    position: relative;
+    &:before {
+      @include setBottomLine($border-color);
+    }
+  }
+  .officeTime,
+  .qualifications {
+    position: relative;
+    &:before {
+      @include setBottomLine($border-color, 0.32rem, 0.32rem);
+    }
+  }
+}
+
+.normal {
+  .profile {
+    background: #fff;
+    box-shadow: $bottom-shadow;
+  }
+  .personal {
+    display: flex;
+    position: relative;
+    padding: 0.64rem 0.32rem;
+    font-size: 0.24rem;
+    color: #fff;
+    background: url(~src/assets/images/mobile/doctor/profile-bg.png) no-repeat center;
+    background-size: cover;
+    .avatar {
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+    }
+    .info {
+      flex: 1;
+      margin-left: 0.25rem;
+      margin-bottom: 0.05rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      &>div,
+      .hospital {
+        max-width: 5.03rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        position: relative;
+      }
+      .name-depart {
+        max-width: 3.85rem;
+        .name {
+          font-size: 0.4rem;
+          margin-right: 0.2rem;
+        }
+      }
+      .follow {
+        position: absolute;
+      }
+      .hospital {
+        display: inline-block;
+        height: 0.34rem;
+        line-height: 0.36rem;
+        padding: 0 0.32rem 0 0.16rem;
+        border-radius: 0.17rem;
+        box-sizing: border-box;
+        background: #00aa99;
+        position: relative;
+        img {
+          width: 0.09rem;
+          height: 0.18rem;
+          margin: auto;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0.15rem;
+        }
+      }
+    }
+    .follow {
+      width: 1.18rem;
+      height: 0.48rem;
+      line-height: 0.48rem;
+      font-size: 0.26rem;
+      text-align: center;
+      color: rgb(248, 251, 251);
+      border-radius: 0.24rem;
+      border: 0.02rem solid rgb(248, 251, 251);
+      background: rgba(0, 0, 0, .08);
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      right: 0;
+      &:active {
+        background: rgba(0, 0, 0, .12);
+      }
+      &.followed {
+        background: #f8fbfb;
+        color: rgb(21, 166, 140);
+        &:active {
+          background: #f8fbfb;
+        }
+      }
+    }
+  }
+}
+
+.expert {
+  .profile {
+    background-color: $page-bg;
+    box-shadow: $bottom-shadow;
+    &>div {
+      background-color: $block-bg;
+    }
+  }
+  .personal {
+    text-align: center;
+    font-size: 0.26rem;
+    color: #80888c;
+    padding-top: 1.28rem;
+    padding-bottom: .48rem;
+    background: url(~src/assets/images/mobile/doctor/expert-bg.png) no-repeat center top;
+    background-size: 7.5rem 2rem;
+    position: relative;
+    &.has-professional-title {
+      background: url(~src/assets/images/mobile/doctor/export-bg-no-article.png) #fff no-repeat center top;
+      background-size: 7.5rem 2rem;
+    }
+    .share {
+      position: absolute;
+      top: 0.24rem;
+      right: 0.24rem;
+      width: 0.5rem;
+      height: 0.46rem;
+    }
+    .professional-title-wrp {
+      position: absolute;
+      top: 0.56rem;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      height: 0.22rem;
+      line-height: 0.22rem;
+      font-size: 0.22rem;
+      color: #fff;
+      .professional-title {
+        letter-spacing: 0.02rem;
+        background: url(~src/assets/images/mobile/doctor/export-bg-decoration-logo.png) no-repeat left center;
+        background-size: 0.22rem;
+        padding-left: 0.3rem;
+        vertical-align: middle;
+        position: relative;
+        &:before {
+          content: ' ';
+          background: url(~src/assets/images/mobile/doctor/export-bg-decoration-left.png) no-repeat left center;
+          background-size: 0.16rem 0.32rem;
+          width: 0.16rem;
+          height: 0.32rem;
+          position: absolute;
+          left: -.32rem;
+          top: 0;
+        }
+        &:after {
+          content: ' ';
+          background: url(~src/assets/images/mobile/doctor/export-bg-decoration-right.png) no-repeat left center;
+          background-size: 0.16rem 0.32rem;
+          width: 0.16rem;
+          height: 0.32rem;
+          position: absolute;
+          right: -.32rem;
+          top: 0;
+        }
+      }
+    }
+    .avatar {
+      position: relative;
+      img {
+        width: 1.44rem;
+        height: 1.44rem;
+        border-radius: 50%;
+      }
+      &::after {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0.41rem;
+        height: 0.41rem;
+        background: url(~src/assets/images/mobile/doctor/expert.png) no-repeat center;
+        background-size: contain;
+      }
+    }
+    .name {
+      margin-top: 0.12rem;
+      margin-bottom: 0.24rem;
+      font-size: 0.34rem;
+      color: #0D0D0F;
+    }
+    .hospital {
+      margin-top: 0.1rem;
+      margin-bottom: 0.39rem;
+      .circle {
+        width: 0.06rem;
+        height: 0.06rem;
+        display: inline-block;
+        line-height: 0.26rem;
+        vertical-align: middle;
+        margin: 0 0.12rem;
+        border-radius: 50%;
+        background: #80888C;
+      }
+      .active {
+        color: #06BA8E;
+        img {
+          width: 0.13rem;
+          height: 0.25rem;
+          margin-left: 0.1rem;
+          margin-top: -.04rem;
+          vertical-align: middle;
+        }
+      }
+    }
+    .count {
+      margin-left: 0.16rem;
+      margin-right: 0.29rem;
+      color: #0D0D0F;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .fans-pv {
+      margin-bottom: 0.68rem;
+    }
+    .follow {
+      width: 1.75rem;
+      height: 0.56rem;
+      margin: 0 auto;
+      line-height: 0.56rem;
+      font-size: 0.26rem;
+      text-align: center;
+      color: #03b98c;
+      border-radius: 0.4rem;
+      border: 0.02rem solid #03b98c;
+      background: rgba(255, 255, 255, .08);
+      box-sizing: border-box;
+      &:active {
+        background: rgba(255, 255, 255, .12);
+      }
+      &.followed {
+        background: #03b98c;
+        color: #fff;
+        &:active {
+          opacity: 0.85;
+        }
+      }
+    }
+  }
+  .forte {
+    padding: 0 0.32rem 0.72rem;
+    font-size: 0.3rem;
+    line-height: 0.54rem;
+    max-height: 1.62rem;
+  }
+  .introductions,
+  .officeTime,
+  .qualifications {
+    padding: 0.72rem 0.34rem;
+    .header {
+      margin-bottom: 0.5rem;
+      font-size: 0.34rem;
+      color: #0d0d0f;
+    }
+    .content {
+      font-size: 0.3rem;
+      line-height: 0.54rem;
+      color: #303435;
+    }
+  } // .introductions {
+  //     margin-bottom: 0;
+  // }
+  .footer {
+    height: 1rem;
+    line-height: 1rem;
+    padding-bottom: 0.22rem;
+    margin-top: -.78rem;
+    img {
+      margin-left: 0;
+    }
+  }
+}
+
+.expert-cancer {
+  background: #FEFEFE;
+  box-shadow: 0 .06rem .08rem 0 rgba(227, 228, 228, 0.60);
+  border-radius: .06rem;
+  overflow: hidden;
+  .profile {
+    position: relative;
+    padding: .44rem 0 0 .32rem;
+    height: 3.04rem;
+    background-image: linear-gradient(-134deg, #00C79B 0%, #0DB6A4 100%);
+    box-sizing: border-box;
+    .name {
+      font-size: .46rem;
+      line-height: .68rem;
+      color: #FFFFFF;
+      span {
+        margin-left: .12rem;
+        font-size: .22rem;
+        opacity: 0.68;
+        line-height: .32rem;
+      }
+    }
+    .hospital {
+      font-size: .26rem;
+      color: #FFFFFF;
+      line-height: .32rem;
+      display: flex;
+      align-items: center;
+      .arrow {
+        margin-left: .06rem;
+        width: .12rem;
+        height: .12rem;
+        border-top: 1px solid currentColor;
+        border-right: 1px solid currentColor;
+        transform: rotate(45deg);
+      }
+    }
+    .hand {
+      position: absolute;
+      height: 2.86rem;
+      width: auto;
+      bottom: 0;
+      right: 0;
+    }
+    .more {
+      margin-top: .38rem;
+      .cancer {
+        background: {
+          image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAAEEfUpiAAAAAXNSR0IArs4c6QAAAlpJREFUWAntlztoVEEUhndFNCAkNsEHEpKImCZWwoJo+ogxYJkiSaMp7UVIF4JoYadobyEoxpSCjVilCJI0KbTTvCB1Irp+/+bOcHbunbvXu4lrkYE/M+f1z7lnZg6bSiUYVSfX6/Ux1qNObswoaw0PFt+bLClB8QlHyravEEdrniTY5vUV3QdDulmtVh8auXnJFrVmzaFJtjQzwS6zJHn1eKLcYVZ1/ZDRC1lFcbpj3iuycFtUXAR+74G2exyJOWC1PyvxksY802SBPV5QhVn5hQS6ahfBRxkjYxP9OAR12UOCC+gGwQ0ZI+M6+lMQjKTsppIpm1PgU7N+Lc/JBZae2a0LrIDD36x0lp0NDO9Bi561nyx34LxL2xNQ5dcoN8AzMOAcMubnlsA/RxzPgXfgAdBtjA3Z/bAEd9Aug0/gi/dIL1asyhK8wtAP7oLTIDYWMPgaeCdqoIbdspvKzwexaPt6dp7AFlFd9C3faD9R6z1wIlQWliGcA/cLBxw5/vMK+G6QtTOHdxP9FBgGec8rK9zptli8AfN0kV2ndHNmAmx8Gwe1JQ21KRHoN0aZoSZzD2yTwJWQwL4Da3uUCNPMa+BzIrczvSwcTAWeADWnJdBXOLCEY+wIeuFSg38KLpfgDUPUXmY4gsXQkCknX/+NeSjT4S+UcFxL+JrauKPI68Yncepxjm3Mv/Ji8xLIizswW8cTiD3DdT7xLJjg/LoLfO4qF0yv5hK+/YH/rUT+EegbYuwVqDL6caEmcqbhGf/ThckmqYb107jrt5Yamf4t+G30R8v/owJ/AKd/1IU9ykllAAAAAElFTkSuQmCC');
+          repeat: no-repeat;
+          position: left center;
+          size: contain;
+        }
+        padding-left:.32rem;
+        font-size:.22rem;
+        color: #FFFFFF;
+        line-height:.32rem;
+        opacity: 0.68;
+      }
+      .follow {
+        height: .4rem;
+        width: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: .2rem;
+        opacity: 0.6;
+        font-size: .24rem;
+        color: #ffffff;
+        position: relative;
+        &.followed {
+          background: rgba(255, 255, 255, 0.20);
+        }
+        &:not(:first-child) {
+          margin-top: .16rem;
+        }
+        &:after {
+          @include setOnePxBorder(#FFFFFF,
+          .4rem);
+        }
+      }
+    }
+  }
+  .info-list {
+    padding: 0 .32rem .8rem .32rem;
+    .footer {
+      img {
+        margin-left: 0;
+      }
+    }
+    .item {
+      padding-top: .6rem;
+      .title {
+        opacity: 0.68;
+        font-size: .26rem;
+        color: #80888C;
+        line-height: .32rem;
+        margin-bottom: .24rem;
+      }
+      .department-list {
+        list-style-type: none;
+        display: flex;
+        flex-flow: wrap;
+        li {
+          width: 3.08rem;
+          height: .72rem;
+          display: flex;
+          padding-left: .28rem;
+          box-sizing: border-box;
+          align-items: center;
+          font-size: .28rem;
+          color: #303135;
+          background: #F7F7F8;
+          border-radius: .06rem;
+          margin: .14rem .14rem 0 0;
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+          &.unclickable {
+            opacity: .68;
+          }
+        }
+      }
+      .field {
+        font-size: .28rem;
+        color: #303135;
+        line-height: .52rem;
+      }
+      .qualification {
+        font-size: .28rem;
+        color: #303135;
+        line-height: .52rem;
+        li {
+          margin: 0;
+        }
+        &.collapse {
+          @include setLineClamp(5);
+        }
+      }
+      .self-intro {
+        font-size: .28rem;
+        color: #303135;
+        line-height: .52rem;
+        li {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.related-info {
+  background: #FEFEFE;
+  box-shadow: 0 .06rem .08rem 0 rgba(227, 228, 228, 0.60);
+  border-radius: .06rem;
+  margin-top: .28rem;
+  .diseases-related {
+    position: relative;
+    &::after {
+      @include setBottomLine;
+    }
+    .header {
+      padding: 0.36rem 0.32rem 0.18rem;
+      font-size: 0.24rem;
+      color: #b8bfc4;
+    }
+    .diseases {
+      padding: 0.18rem 0.32rem;
+      .disease {
+        position: relative;
+        height: 1.72rem;
+        padding: 0 0.36rem;
+        margin-bottom: 0.38rem;
+        border-radius: 0.08rem;
+        border-top: 0.08rem solid #44ba9c;
+        box-shadow: 0 0.04rem 0.20rem 0 rgba(0, 0, 0, 0.08);
+        box-sizing: border-box;
+        background: url(~src/assets/images/mobile/card/triangle1.png) #fff no-repeat top right;
+        background-size: 4.6rem 1.72rem;
+        overflow: hidden;
+        .name {
+          padding: 0.33rem 0 0.15rem;
+          font-size: 0.36rem;
+          color: #0D0D0F;
+        }
+        .desc {
+          font-size: 0.26rem;
+          color: #80888C;
+        }
+      }
+    }
+  }
+  .doctab-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: .96rem;
+    position: relative;
+    &:after {
+      @include setBottomLine(#000000);
+      opacity: 0.08;
+    }
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: #FEFEFE;
+    }
+    .tab {
+      font-size: .28rem;
+      color: #80888C;
+      line-height: .34rem;
+      &.active {
+        color: #06BA8E;
+        position: relative;
+        &:after {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -.29rem;
+          content: "\20";
+          height: .06rem;
+          background-image: linear-gradient(-134deg, #00C79B 0%, #0DB6A4 100%);
+        }
+      }
+    }
+  }
+  .docTabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; // width: 7.5rem;
+    height: 1.12rem;
+    margin: 0 auto;
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: #FEFEFE;
+    }
+    &.withSearcher {
+      top: 0.88rem;
+    }
+    .tab {
+      width: 1.6rem;
+      height: 0.56rem;
+      line-height: 0.56rem;
+      text-align: center;
+      font-size: 0.26rem;
+      color: #80888C;
+      border: 1px solid #B8BFC4;
+      border-radius: 1rem;
+      &:active {
+        background: rgba(18, 51, 66, .03);
+      }
+      &.active {
+        background: #06BA8E;
+        border-color: #06BA8E;
+        color: #FFFFFF;
+        &:active {
+          background: rgba(6, 186, 142, .9);
+        }
+      }
+    }
+  }
+}

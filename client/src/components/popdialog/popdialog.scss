@@ -1,0 +1,48 @@
+.dialog-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; // opacity: 0.2;
+    background: rgba(0, 0, 0, 0.2); //  padding: 1rem 2rem;
+    .main-dialog {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        box-shadow: 0 0.04rem .20rem 0 rgba(0, 0, 0, 0.04);
+        border-radius: .08rem;
+        margin: 0 auto;
+        width: 5.42rem;
+        .dialog-title {
+            font-size: .36rem;
+            text-align: center;
+            font-weight: bold;
+            color: #303435;
+                padding: .48rem 0 0;
+        }
+        .dialog-content {
+            font-size: .3rem;
+            text-align: justify;
+            color: #303435;
+            padding: .22rem .48rem .48rem .48rem;
+        }
+        .dialog-buttons {
+            font-size: 0;
+            a {
+                display: inline-block;
+                font-size: .36rem;
+                width: 50%;
+                text-align: center;
+                cursor: pointer;
+                padding: 0.22rem 0;
+                &.cancel {
+                    color: #80888C;
+                }
+                &.ok {
+                    color: #06BA8E;
+                }
+            }
+        }
+    }
+}

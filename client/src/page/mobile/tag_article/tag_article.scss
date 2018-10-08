@@ -1,0 +1,229 @@
+@import '~src/assets/style/common-util';
+.container {
+  background: #f3f3f3;
+  margin: 0 auto;
+  flex: 1;
+}
+
+/* 一级标签列表 */
+
+.tags {
+  margin: auto;
+  position: fixed;
+  top: 0.88rem;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: .76rem;
+  overflow: hidden;
+  background: #ffffff;
+  :after {
+    @include setBottomLine();
+  }
+  @include hideScrollbar;
+  .tag-list {
+    height: .88rem;
+    list-style: none;
+    font-size: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    li {
+      height: .76rem;
+      padding: 0.2rem .36rem;
+      box-sizing: border-box;
+      display: inline-block;
+      font-size: 0.3rem;
+      line-height: 0.36rem;
+      color: #80888C;
+      text-align: center;
+      position: relative;
+      &.active {
+        color: #06BA8E;
+        span {
+          position: relative;
+          &:after {
+            position: absolute;
+            content: "\20";
+            bottom: -.2rem;
+            left: 0;
+            right: 0;
+            height: 0.04rem;
+            background-color: currentColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 标签内容区 */
+
+.tag-content {
+  max-width: 7.5rem;
+  margin: .88rem auto 0;
+  &.with-tag {
+    margin: 1.64rem auto 0;
+  }
+  &.with-fix-intro {
+    margin-top: 0;
+    .intro-content-inner {
+      max-height: 50vh;
+    }
+  }
+}
+
+/* 文章列表分区标题 */
+
+.doc-title {
+  background-color: #fcfcfc;
+  color: #0D0D0F;
+  font-size: .36rem;
+  padding: .48rem 0 .18rem .28rem;
+  margin-top: .18rem;
+  font-weight: 600;
+}
+
+/* 标签简介卡片么蒙层 */
+
+.mask {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .85);
+  z-index: 2;
+}
+
+/* 标签简介卡片 */
+
+.intro-panel {
+  padding: .65rem 0 1.09rem;
+  margin-bottom: .18rem;
+  background: #fff;
+  position: relative;
+  transition: all .5s;
+  z-index: 3;
+  .intro-title {
+    font-size: .48rem;
+    color: #161515;
+    line-height: .67rem;
+    text-align: center;
+    margin-bottom: .34rem;
+  }
+  .intro-content-inner {
+    width: 100%;
+    padding: 0 .7rem;
+    font-size: .28rem;
+    color: #303135;
+    text-align: justify;
+    line-height: .42rem;
+    color: #303135;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+  }
+  .arrow {
+    width: 1.44rem;
+    height: 1.09rem;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: url(~src/assets/images/mobile/tag_article/arrow-down.png) no-repeat center center;
+    background-size: .28rem;
+    transition: transform .5s;
+    &.arrow-up {
+      transform: rotate(-180deg);
+      transform-origin: center;
+    }
+  }
+}
+
+/* 二级标签 */
+
+.papertag-wrp-outter {
+  top: .88rem;
+}
+
+.papertag-wrp-inner {
+  /deep/ .papertag {
+    &.fixed {
+      display: none;
+    }
+  }
+}
+
+.btn-select {
+  width: 2.56rem;
+  height: .72rem;
+  display: block;
+  background-image: linear-gradient(-133deg, #00C79B 0%, #0DB6A4 100%);
+  line-height: .72rem;
+  text-align: center;
+  border-radius: .36rem;
+  position: fixed;
+  bottom: .56rem;
+  right: .28rem;
+  color: #fff;
+  z-index: 1;
+  @include setTouchBackground;
+}
+
+.filters-picker {
+  width: 7.5rem;
+  .picker-header {
+    height: 1.05rem;
+    line-height: 1.05rem;
+    text-align: center;
+    color: #000000;
+    position: relative;
+    &::after {
+      @include setBottomLine(#e5e5e5);
+    }
+    .confirm-btn {
+      font-size: .28rem;
+      color: #06BA8E;
+      position: absolute;
+      top: 0;
+      right: .28rem;
+    }
+    .reset-btn {
+      font-size: .28rem;
+      color: #06BA8E;
+      position: absolute;
+      top: 0;
+      left: .28rem;
+    }
+  }
+  .picker-loading {
+    padding: 1rem 0;
+    text-align: center;
+    font-size: .32rem;
+  }
+}
+
+/deep/ .picker-content {
+  height: 60vh;
+  .picker-column {
+    &:not(:first-child) {
+      .column-header-default,
+      .column-option-default {
+        padding-left: .8rem;
+      }
+    }
+  }
+}
+
+/deep/ .mint-popup {
+  z-index: 4 !important;
+}
+
+/deep/ .v-modal {
+  z-index: 3 !important;
+}

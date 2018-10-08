@@ -1,0 +1,122 @@
+@import '~src/assets/style/common-util';
+.container{
+  background: #f7f7f7;
+  width: 7.5rem;
+  margin: 0 auto;
+  position: relative;
+}
+.overview{
+	padding-bottom:.5rem;
+	.card{
+		background:#ffffff;
+		padding:0 .3rem;
+		margin-bottom:.2rem;
+		.disease{
+			padding-bottom:.6rem;
+			position:relative;
+			&:after{
+				@include setBottomLine(#e5e5e5);
+			}
+			.title{
+				padding:.5rem 0;
+				font-size:.64rem;
+				color:#0d1119;
+				position:relative;
+				.more{
+					position:absolute;
+					font-size:.28rem;
+					line-height:.3rem;
+					color:#838586;
+					top:50%;
+					right:0;
+					margin-top:-.15rem;
+					padding-right:.2rem;
+					&:after{
+						position:absolute;
+						content: "\20";
+						display: block;
+					    border-top: 1px solid currentColor;
+					    border-right: 1px solid currentColor;
+					    transform: rotate(45deg);
+					    height:.12rem;
+					    width:.12rem;
+					    top:50%;
+						right:0;
+						margin-top:-.06rem;
+					}
+				}
+			}
+			.desc{
+				font-size:.34rem;
+				color:#838586;
+				&.red{
+					color:#e12121;
+				}
+				&:not(:last-child){
+					margin-bottom:.3rem;
+				}
+			}
+		}
+		.reason{
+			padding:.56rem 0;
+			.title{
+				font-size:.34rem;
+				color:#303435;
+				font-weight:700;
+				margin-bottom:.4rem;
+			}
+			.desc{
+				font-size:.34rem;
+				color:#838586;
+			}
+			.list{
+				margin-top:.3rem;
+				line-height:.56rem;
+				font-size:0;
+				.item{
+					font-size:.34rem;
+					color:#838586;
+					display:inline-block;
+					&:not(:first-child){
+						margin-left:.56rem;
+						position:relative;
+						&:before{
+							position:absolute;
+							display:block;
+							content:"\20";
+							height:.3rem;
+							width:.04rem;
+							border-radius:.02rem;
+							background:#e5e5e5;
+							top:.13rem;
+							left:-.3rem;
+						}
+					}
+				}
+			}
+		}
+		.help-list{
+			.item{
+				padding:.4rem .3rem .4rem 0;
+				font-size:.34rem;
+				color:#4c4f50;
+				position:relative;
+				&:not(:last-child):after{
+					@include setBottomLine(#e5e5e5);
+				}
+				&:before{
+					position:absolute;
+					content: "\20";
+					display: block;
+				    border-top: 1px solid #cccccc;
+				    border-right: 1px solid #cccccc;
+				    transform: rotate(135deg);
+				    height:.16rem;
+				    width:.16rem;
+				    top:.54rem;
+					right:.06rem;
+				}
+			}
+		}
+	}
+}

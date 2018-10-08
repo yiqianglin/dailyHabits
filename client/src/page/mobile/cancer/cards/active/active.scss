@@ -1,0 +1,81 @@
+@import '~src/assets/style/common-util';
+$card-bg: #fefefe;
+$card-pd: .4rem;
+$card-mg: .2rem;
+$card-shadow: 0 .06rem .08rem 0 rgba(227, 228, 228, .60);
+// 运营列表
+.active-wrapper {
+  /* height: 1.85rem;
+  margin-bottom: -.2rem; */
+  margin: $card-mg 0;
+  padding: .4rem $card-pd;
+  background: $card-bg;
+  /* overflow: hidden; */
+  @include hideScrollbar;
+  .active-list {
+    margin: -.1rem;
+    /* height: 1.97rem; */
+    display: flex;
+    flex-wrap: wrap;
+    /* overflow-x: auto;
+    -webkit-overflow-scrolling: touch; */
+    position: relative;
+    /* &::after,
+    &::before {
+      content: " ";
+      width: 0;
+      height: 0;
+      padding: .16rem;
+      display: inline-block;
+    } */
+  }
+  .active-item {
+    width: 3.25rem;
+    /* min-width: 3.37rem; */
+    /* flex: 1; */
+    height: 1.65rem;
+    padding: 0 .34rem;
+    margin: .1rem;
+    box-sizing: border-box;
+    background: url(~src/assets/images/mobile/cancer/active_bg_white.png) $card-bg no-repeat center/cover;
+    border-radius: 0.1rem;
+    box-shadow: $card-shadow;
+    &:last-child {
+      flex: 1;
+    }
+    .title {
+      padding: .41rem 0 0;
+      font-size: .32rem;
+      font-weight: $font-medium;
+      color: #2A2A33;
+    }
+    .count {
+      font-size: .2rem;
+      font-weight: $font-regular;
+      color: #4A4A4A;
+    }
+  }
+  /deep/ .broadcast-container {
+    background: unset;
+    border-radius: unset;
+    &::after,
+    &::before {
+      display: none;
+    }
+    .broadcast-wrapper .broadcast-slide {
+      padding: 0;
+      font-size: .24rem;
+      color: #4A4A4A;
+    }
+  }
+  .font-white {
+    .title,
+    .count {
+      color: #fff;
+    }
+    /deep/ .broadcast-container .broadcast-wrapper .broadcast-slide,
+    /deep/ .marquee-container .marquee-wrapper .marquee-slide {
+      color: #fff;
+    }
+  }
+}

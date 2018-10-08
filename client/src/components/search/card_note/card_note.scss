@@ -1,0 +1,40 @@
+@import '~src/assets/style/common-util';
+.note-container {
+  padding: 0.4rem 0.36rem;
+}
+
+.note-wrapper {
+  background: url(~src/assets/images/mobile/note_explain/card_bg.png) #FFFFFF no-repeat top right;
+  background-size: 2.06rem .72rem;
+  box-shadow: 0 0.09rem 0.19rem 0 rgba(0, 0, 0, 0.04);
+  border-radius: 0.16rem;
+  padding: 0.4rem 0.38rem 0.32rem 0.3rem;
+  .brief {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .names {
+    flex: 1;
+  }
+  .name {
+    font-size: 0.48rem;
+    font-weight: $font-medium;
+    color: #0D0D0F;
+  }
+  .alias {
+    font-size: 0.24rem;
+    color: #80888C;
+  }
+  .count {
+    font-size: 0.24rem;
+    color: #06BA8E;
+    max-width: 1.64rem;
+  }
+  .desc {
+    font-size: 0.28rem;
+    color: #303435;
+    @include setLineClamp(3);
+    margin-top: 0.17rem;
+  }
+}

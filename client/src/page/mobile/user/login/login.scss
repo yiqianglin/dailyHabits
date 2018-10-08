@@ -1,0 +1,182 @@
+@import '~src/assets/style/common-util';
+.container {
+  background: #f8fbfb;
+  width: 7.5rem;
+  margin: 0 auto;
+  font-size: .28rem;
+  color: #80888c;
+  padding-top:.88rem;
+}
+
+.logo{
+  overflow: hidden;
+  height: 4rem;
+  .icon{
+    display: block;
+    margin: 1.1rem auto .33rem auto;
+    width: 1.46rem;
+    height: 1.46rem;
+  }
+  .logo-desc{
+    text-align: center;
+    //margin-bottom: .9rem;
+  }
+}
+
+
+.form{
+  width: 5.56rem;
+  margin: 0 auto;
+  font-size: .28rem;
+  .input{
+    position: relative;
+    height: .9rem;
+    //border-bottom: .015rem solid $border-color;
+    &:after {
+      @include setBottomLine();
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    input{
+      outline: none;
+      border: none;
+      background: transparent;
+      font-size: .28rem;
+      &::-webkit-input-placeholder {
+        color:#b8bfc4;
+      }
+    }
+    .btn-code{
+      width: 1.6rem;
+      text-align: right;
+      border-left: .015rem solid $border-color;
+      color: #80888c;
+      &.disable{
+        color: #b8bfc4;
+      }
+    }
+  }
+  .message{
+    font-size: .24rem;
+    height: .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .error{
+      color: #ff1f1f;
+    }
+    .info{
+      color: #80888c;
+    }
+  }
+  .btn-login{
+    margin: .25rem auto .2rem auto;
+    display: block;
+    height: .8rem;
+    line-height: .8rem;
+    border-radius: .4rem;
+    background: #03b98c;
+    font-size: .32rem;
+    text-align: center;
+    color: #fff;
+  }
+  .login-desc{
+    font-size: .24rem;
+    text-align: center;
+    a{
+      color: #03b98c;
+    }
+  }
+}
+
+.other{
+  font-size: .24rem;
+  margin: .6rem auto 0 auto;
+  width: 5.56rem;
+  text-align: center;
+  .other-desc{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:before{
+      content: '';
+      display: inline-block;
+      height: 0;
+      width: 1.6rem;
+      border-bottom: .015rem solid $border-color;
+    }
+    &:after{
+      content: '';
+      display: inline-block;
+      height: 0;
+      width: 1.6rem;
+      border-bottom: .015rem solid $border-color;
+    }
+  }
+  .items{
+    margin: .4rem auto .2rem auto;
+    display: flex;
+    justify-content: center;
+    & > div{
+      margin: 0 .5rem;
+      &.hide{
+        display: none;
+      }
+    }
+    .icon{
+      display: block;
+      margin: 0 auto .1rem auto;
+      width: .49rem;
+      height: .39rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      &.wx{
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAnCAMAAACRzVCoAAAAflBMVEUAAAC4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb9XdFxnAAAAKXRSTlMA++7ejxIBqEW06bsuGH9XHg7048Kch0sF1M7KcmA12JR3ZlAoJa6jOzTSPz0AAAGqSURBVDjLlZTnsoMgEEaXJvaSaDRF08u+/wteEyEaA2Tu+cUMHnb53AEmiIyXjOIi3MpdDD/xsojgBJYmbuG8xzkLLsCKuKGJsLYJ8RItpJ5ZoGjlYBLyEB3sDCGV77ZHlTCiV92X0aJi5XlcR5uPrW69eQmmw+x3GnXysd84oOI8M3zURtGnrIy036hQEcyMA2qkSAK1pHWREVSQ4tPYogsW8NVqNi4UbZCoTRK/3R1PdT41rML9GnP2Dr7yvR812KOL8IO1zmxtFKKEE5xzG2a5MglBUhoLX5/GGb/ZCEuCy2cEzfI7pItUrb/36IYMZzW9svsyeK1nxVPqvgB/nIZmPS+Rb4ZFAqBcDgBDPfocgMvi0yg7tWgBuJrfBmKV3ek1jJ9BpqkuJqP3z5BURzzML50amUQHe3hx3eCIH7mMEAZSHKkDl7FUxvSj08FllMpgiKR6HANGEKvMZawGoUAMhre5EbkoFg6jUzeXPkzgdiECIyK0CSQGMz6xvpA2MmK5th2fGlo6gYtcmiq46eSstQB+IjIe7SllZdU+7gSpB//icicX6PkDQx+zqzJ542wAAAAASUVORK5CYII=);
+      }
+      &.qq{
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAoCAMAAABDwLOoAAAAWlBMVEUAAAC4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb+4wb9F6vhjAAAAHXRSTlMA+eTxu0Ei69yxknYVC6CHhG5MPsLVycdlYFxIKt7iY+UAAAD0SURBVDjLldTbFoIgEAVQbiJoaKXdm///zZLKAZ3B1XneCznqjEhjW6MkSGVaK+hYDxhPqruENPK+JgdY5rAkR1jnmJNdTZh6l5kGqDTZMZI0Mj2oBTptYi6MuSAJwCXMZmDNMJsra67ElflL96zp2TeIaf4yjjXuRx7A5/E1vmD8h1goxUazL5p9NKpo1EQqKKd6m27DdG+jN4zGR/GpsFWhmdk0ZmreKb55N7UHcMHwZwQHIEA/cdaJmX9qEH7AESSHcPDln7UXmHAiySlkO4zcGxYB92WrXBi6eaJuwOWGi25UOtbXtTuPZ1frWFyrMa67FwGUcLBqkiO3AAAAAElFTkSuQmCC);
+      }
+    }
+    .desc{
+      display: block;
+      height: .3rem;
+      line-height: .3rem;
+    }
+  }
+
+}
+
+//弹出框，后面设计成组件
+.alert{
+  margin: auto;
+  width: 2.6rem;
+  height: 2.6rem;
+  position: absolute;
+  top: 0;left: 0;right: 0;bottom: 0;
+  font-size: .34rem;
+  background: rgba(96, 106, 107, .9);
+  border-radius: .3rem;
+  box-shadow: 0 0 0.36rem rgba(0, 0, 0, 0.4);
+  transition:all 0.5s linear;
+  visibility:hidden;
+  opacity:0;
+  &.show{
+    visibility:visible;
+    opacity:1;
+  }
+  .icon{
+    display: block;
+    width: .75rem;
+    height: .51rem;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAAzCAMAAADo4QV0AAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAzxOYAQmsvgb5oOGQEQR04cts4wAAAKdJREFUSMft0jsSwzAIRVEnNoqQP2H/q407itfEcyl1e53RAEtF23ffD6uh1rgbdVS4lVERVke1Our1ntSkJjWpv6hrq6LO5n70ml+1uGu9grKIxODYzRPDGxyRGD0G+yQGKMEApRigFAOUYoBSDFCKAUoxQCkGKMUApRigFAOUYoBSTCiCCUUwoQAmFMCEAlhSGEsKY0lxLCmOJcWx1X2cS1FXf/jgB54GIztBWh+UAAAAAElFTkSuQmCC);
+    background-size: contain;
+    margin: .75rem auto .3rem auto;
+  }
+  .msg{
+    color:#fff;
+    text-align: center;
+  }
+}
+

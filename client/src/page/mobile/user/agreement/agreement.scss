@@ -1,0 +1,33 @@
+@import '~src/assets/style/common-util';
+
+.container {
+  background: #f8fbfb;
+  width: 7.5rem;
+  margin: 0 auto;
+  font-size: .24rem;
+  line-height: .48rem;
+  color: #80888c;
+
+}
+
+.main {
+  margin: .5rem .25rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: .32rem;
+}
+
+h2 {
+  font-size: .28rem;
+  margin-top: .48rem;
+}
+
+p {
+  text-indent: .5rem;
+}
+
+.strong {
+  font-weight: bold;
+}

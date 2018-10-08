@@ -1,0 +1,115 @@
+$toast-bg-add: rgba(48, 52, 53, 0.98);
+$toast-bg-common: rgba(0, 0, 0, 0.7);
+$font-color: #fff;
+.baike-toast {
+  font-size: 0;
+}
+
+.baike-toast-common {
+  position: fixed;
+  z-index: 102;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  padding: .15rem .5rem;
+  text-align: center;
+  border-radius: .08rem;
+  background: $toast-bg-common;
+  color: $font-color;
+  font-size: .28rem;
+  &.baike-toast-icon {
+    padding: .15rem .4rem;
+  }
+  .toast-icon {
+    width: auto;
+    height: .32rem;
+    margin-right: .15rem;
+    vertical-align: middle;
+  }
+}
+
+.baike-toast-add {
+  position: fixed;
+  z-index: 102;
+  top: .735rem;
+  right: .32rem;
+  box-sizing: border-box;
+  padding: 0 0.15rem;
+  height: 0.72rem;
+  line-height: 0.72rem;
+  border-radius: 0.36rem;
+  font-size: 0.2rem;
+  color: $font-color;
+  background: $toast-bg-add;
+  /* 
+  background-color: #505a5b;
+  &::after {
+    width: 0.41rem;
+    height: 0.21rem;
+    content: " ";
+    position: absolute;
+    top: -.105rem;
+    right: 0.15rem;
+    background: url(~src/assets/images/mobile/message/corner.png) no-repeat;
+    background-size: contain;
+  }
+  */
+  &::after {
+    content: " ";
+    position: absolute;
+    top: -.3rem;
+    right: 0.18rem;
+    width: .24rem;
+    height: .32rem;
+    border-radius: 50%;
+    box-shadow: 0.12rem 0.1rem 0 0 #303538;
+    transform: rotate(30deg);
+  }
+  .toast-icon {
+    width: .39rem;
+    vertical-align: middle;
+    margin-right: .1rem;
+  }
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active,
+.slide-up-transition {
+  -webkit-transition: opacity .3s ease, top .3s ease-in;
+  transition: opacity .3s ease, top .3s ease-in;
+}
+
+.slide-up-leave-active,
+.slide-up-enter,
+.slide-up-leave {
+  opacity: 0;
+  top: 110% !important;
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-right-transition {
+  -webkit-transition: opacity .3s ease, transform .3s ease;
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+.slide-right-leave-active,
+.slide-right-enter,
+.slide-right-leave {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.fade-enter-active,
+.fade-leave-active,
+.fade-transition {
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+.fade-enter,
+.fade-leave,
+.fade-leave-active {
+  opacity: 0;
+}

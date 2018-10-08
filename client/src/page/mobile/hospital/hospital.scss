@@ -1,0 +1,447 @@
+@import '~src/assets/style/common-util';
+
+$page-bg: #f3f3f3;
+$block-bg: #fefefe;
+$border-color: #e3e6ea;
+$bottom-shadow: 0 0.06rem 0.08rem 0 rgba(227,228,228,0.60);
+
+.container {
+  background: $page-bg;
+  width: 7.5rem;
+  margin: 0 auto;
+}
+
+.md {
+  p {
+    text-align: left;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ol, ul {
+    padding-left: 0;
+    list-style-position: inside;
+
+    li:first-child {
+      margin-top: 0;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.load-more-arrow {
+  padding: 0.2rem 0 0.4rem;
+  height: 0.13rem;
+  background: url(~src/assets/images/mobile/doctor/arrow-up.png) no-repeat center 0.2rem;
+  background-size: 0.25rem 0.13rem;
+
+  &.collapse {
+    background: url(~src/assets/images/mobile/doctor/arrow-down.png) no-repeat center 0.2rem;
+    background-size: 0.25rem 0.13rem;
+  }
+}
+
+.profile {
+  background: $block-bg;
+  margin: 1.16rem 0.28rem 0.28rem;
+  padding-bottom: 0.42rem;
+  box-shadow: $bottom-shadow;
+  border-radius: 0.06rem;
+  overflow: hidden;
+}
+
+.profile-info {
+  text-align: center;
+  font-size: 0.24rem;
+  color: #fff;
+  background: url(~src/assets/images/mobile/hospital/bg.png) no-repeat center/cover;
+  position: relative;
+
+  &.masked {
+    &::before {
+      content: " ";
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.8;
+      background: url(~src/assets/images/mobile/hospital/mask_l.png) repeat-x center;
+    }
+  }
+
+  &.nologo {
+    .info-detail {
+      padding-top: 1.28rem;
+    }
+
+    .loc-tel {
+      margin-top: 1.51rem;
+    }
+  }
+
+  .info-detail {
+    padding: 0.42rem 0.32rem 0.25rem;
+    position: relative;
+  }
+
+  .logo {
+    width: 1.44rem;
+    height: 1.44rem;
+    border-radius: 50%;
+    margin-bottom: 0.28rem;
+  }
+
+  .name {
+    font-size: 0.36rem;
+  }
+
+  .tag-list {
+    margin-top: 0.16rem;
+    font-size: 0;
+
+    .tag {
+      display: inline-block;
+      line-height: 0.4rem;
+      padding: 0 0.16rem;
+      margin-right: 0.2rem;
+      position: relative;
+      font-size: 0.24rem;
+      opacity: 0.68;
+
+      &:after {
+        @include setOnePxBorder(#fff, 0.12rem);
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .loc-tel {
+    text-align: justify;
+    margin-top: 0.65rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &:before {
+      opacity: 0.2;
+      @include setBottomLine(#fff);
+      top: -.23rem;
+    }
+
+    img {
+      height: 0.32rem;
+      vertical-align: middle;
+    }
+
+    .loc {
+      img {
+        margin-bottom: 0.05rem;
+      }
+    }
+
+    .tel {
+      position: relative;
+      margin-right: 0.08rem;
+    }
+  }
+}
+
+.profile-section {
+  padding: 0 0.32rem;
+
+  .header-title {
+    padding: 0.55rem 0 0.24rem;
+    opacity: 0.68;
+    font-size: 0.26rem;
+    color: #80888C;
+  }
+
+  .content {
+    font-size: 0.28rem;
+    color: #303135;
+    line-height: 0.52rem;
+  }
+}
+
+.profile-intro {
+  &.collapse .content {
+    ul li {
+      display: none;
+
+      &:nth-child(-n+2) {
+        display: list-item;
+      }
+    }
+  }
+}
+
+.profile-doctors {
+  ul {
+    list-style: none;
+
+    li {
+      display: flex;
+      font-size: 0;
+      padding: 0.25rem 0;
+      position: relative;
+
+      &:not(:last-child):after {
+        @include setBottomLine(#E7ECED);
+      }
+
+      img {
+        width: 0.88rem;
+        height: 0.88rem;
+        margin-right: 0.2rem;
+        border-radius: 50%;
+      }
+
+      .load-more-arrow {
+        padding: 0.2rem 0;
+      }
+
+      .doctor {
+        max-width: 6rem;
+        width: 5.6rem;
+
+        .name {
+          font-size: 0.34rem;
+          color: #0D0D0F;
+          line-height: 0.42rem;
+
+          span {
+            font-size: 0.24rem;
+            color: #80888C;
+          }
+
+          &.only {
+            margin-top: 0.2rem;
+          }
+        }
+
+        .desc {
+          margin-top: 0.12rem;
+          -webkit-backface-visibility: hidden;
+          -webkit-perspective: 1000;
+          -webkit-overflow-scrolling: touch;
+          color: #80888C;
+          line-height: 0.32rem;
+          overflow: hidden;
+
+          span {
+            display: inline-block;
+            font-size: 0.26rem;
+            border: 1px solid #B8BFC4;
+            color: #303435;
+            padding: 0.05rem;
+            margin-right: 0.1rem;
+            margin-bottom: 0.1rem;
+            border-radius: 0.08rem;
+            line-height: 100%;
+          }
+
+          .fix-text {
+            font-size: 0.26rem;
+            border: 1px solid transparent;
+            border-radius: 0.08rem;
+            padding: 0.05rem;
+            margin-right: 0.1rem;
+            margin-bottom: 0.1rem;
+          }
+        }
+
+        &.collapse {
+          .desc {
+            @include setLineClamp(3);
+          }
+        }
+      }
+    }
+  }
+}
+
+.profile-depart {
+  position: relative;
+
+  &:before {
+    @include setBottomLine($border-color, 0.32rem, 0.32rem);
+    top: 0;
+  }
+
+  .depart-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .depart-item {
+    background: #f7f7f8;
+    border-radius: 0.06rem;
+    box-sizing: border-box;
+    padding: 0.0 0.28rem;
+    width: 3.08rem;
+    height: 0.72rem;
+    line-height: 0.72rem;
+    font-size: 0.28rem;
+    color: #303135;
+    margin-right: 0.14rem;
+    margin-bottom: 0.14rem;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.profile-case {
+  .header {
+    font-size: 0.34rem;
+    color: #0D0D0F;
+    margin-bottom: 0.36rem;
+    font-weight: 600;
+  }
+
+  .case-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    &.collapse {
+      max-height: 1.88rem;
+    }
+  }
+
+  .case-item {
+    background: #fff;
+    border-radius: 0.06rem;
+    box-sizing: border-box;
+    padding: 0 0.28rem;
+    width: 3.08rem;
+    height: 0.72rem;
+    line-height: 0.72rem;
+    font-size: 0.28rem;
+    color: #0D0D0F;
+    margin-right: 0.14rem;
+    margin-bottom: 0.14rem;
+    position: relative;
+
+    &:after {
+      @include setOnePxBorder($border-color, 0.12rem);
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.hospital-article {
+  background: $block-bg;
+  margin: 0.28rem 0.28rem 0.73rem;
+  box-shadow: $bottom-shadow;
+  border-radius: 0.06rem;
+
+  .paper {
+    background: $block-bg;
+  }
+}
+
+.tags {
+  height: 0.96rem;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    @include setBottomLine;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+    display: none;
+  }
+
+  .tag-list {
+    height: 1.08rem;
+    list-style: none;
+    font-size: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+
+    li {
+      height: 0.96rem;
+      padding: 0.31rem 0.59rem;
+      box-sizing: border-box;
+      display: inline-block;
+      font-size: 0.28rem;
+      color: #80888C;
+      text-align: center;
+      position: relative;
+
+      &:not(:first-child) {
+        a:after {
+          @include setSeperator(1px, 0, #000);
+          height: 2em;
+          opacity: 0.08;
+        }
+      }
+
+      &.active {
+        color: #06BA8E;
+
+        span {
+          position: relative;
+
+          &::after {
+            position: absolute;
+            content: "\20";
+            bottom: -.25rem;
+            left: 0;
+            right: 0;
+            height: 0.06rem;
+            background-color: currentColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+.links {
+  font-size: 0.24rem;
+  color: #abb5ba;
+  text-align: center;
+  margin: 0.6rem 0;
+
+  img {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .website {
+    margin-top: 0.2rem;
+  }
+}

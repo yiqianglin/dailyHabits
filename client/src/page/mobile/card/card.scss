@@ -1,0 +1,64 @@
+@import '~src/assets/style/common-util';
+
+.container{
+  background: #f3f3f3;
+  width: 7.5rem;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+}
+.card{
+	padding:.88rem 0 .96rem;
+}
+.guide-mask{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding-top: 1.28rem;
+  box-sizing: border-box;
+  .top-point{
+    .arrow{
+      width: 1.01rem;
+      height: .55rem;
+      background: url(~src/assets/images/mobile/card/arr.png) no-repeat center center;
+      background-size: contain;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: rotate(-90deg);
+    }
+    .hand{
+      width: 1.12rem;
+      height: 1.12rem;
+      margin: .3rem auto .25rem;
+      transform: translateX(.06rem);
+      .hand-up{
+        width: 1.12rem;
+      }
+    }
+  }
+  .text{
+    font-size: .3rem;
+    color: #FFFFFF;
+    line-height: .4rem;
+    text-align: center;
+  }
+  .bottom-point{
+    position: fixed;
+    bottom: 1rem;
+    right: .8rem;
+    .hand{
+      width: 1.12rem;
+      height: 1.12rem;
+      margin: .16rem auto 0;
+      .hand-down{
+        width: 1.12rem;
+        transform: rotate(-180deg); 
+      }
+    }
+  }
+}

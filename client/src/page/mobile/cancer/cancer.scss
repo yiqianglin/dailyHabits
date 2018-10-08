@@ -1,0 +1,112 @@
+@import '~src/assets/style/common-util';
+$page-bg: #f3f3f3;
+$block-bg: #fefefe;
+$page-pd: 0;
+$block-pd: 0.4rem;
+$block-mg: .2rem;
+$block-shadow: 0 0.06rem 0.08rem 0 rgba(227, 228, 228, .60);
+$border-color: rgba(0, 0, 0, .08);
+.container {
+  background: $page-bg;
+  width: 7.5rem;
+  flex: 1;
+  margin: 0 auto;
+  padding-top: 0.88rem;
+}
+
+// 疾病题头卡片
+.card-disease {
+  margin: 0 $page-pd;
+}
+
+// 组合卡片
+.card-tab {
+  background: $block-bg;
+  /* box-shadow: $block-shadow; */
+  border-radius: 0.06rem;
+  margin: $block-mg $page-pd;
+  /* overflow: hidden; */
+  .card-tab-title {
+    color: rgba(0, 0, 0, .87);
+    font-size: .4rem;
+    font-weight: $font-medium;
+    padding: .35rem $block-pd .24rem;
+  }
+  /deep/ .card-title {
+    display: none;
+  }
+  /deep/ .tree-wrapper {
+    .card-hint {
+      margin: 0.22rem 0 0;
+    }
+  }
+}
+
+// 带筛选器卡片
+.card-filter {
+  background: $block-bg;
+  box-shadow: $block-shadow;
+  border-radius: 0.06rem;
+  border-top: 0.08rem solid #21cda9; // overflow: hidden;
+  margin: $block-mg $page-pd;
+}
+
+// 目录型卡片
+.card-tree {
+  background: $block-bg;
+  box-shadow: $block-shadow;
+  border-radius: 0.06rem;
+  border-top: 0.08rem solid #21cda9;
+  margin: $block-mg $page-pd;
+  overflow: hidden;
+}
+
+// tab列表
+.tab-wrapper {
+  height: 0.94rem;
+  overflow: hidden;
+  position: relative;
+  @include hideScrollbar;
+  &:after {
+    @include setBottomLine($border-color);
+  }
+  .tab-list {
+    height: 1.06rem;
+    list-style: none;
+    font-size: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+  .tab-item {
+    height: 0.95rem;
+    line-height: 0.95rem;
+    padding: 0 0.4rem;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 0.32rem;
+    color: rgba(0, 0, 0, .54);
+    text-align: center;
+    position: relative;
+    /* &:not(:first-child)::before {
+      @include setSeperator(1px, 0, $border-color);
+      height: 2em;
+    } */
+    &.active {
+      color: #06BA8E;
+      font-weight: $font-medium;
+      span {
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "\20";
+          bottom: -.28rem;
+          left: 0;
+          right: 0;
+          height: 0.07rem;
+          background-color: currentColor;
+        }
+      }
+    }
+  }
+}

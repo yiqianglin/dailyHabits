@@ -1,0 +1,95 @@
+@import '~src/assets/style/common-util';
+$card-bg: #fefefe;
+$card-pd: .4rem;
+$card-shadow: 0 .06rem .08rem 0 rgba(227, 228, 228, .60);
+.card-wrapper {
+  &::after {
+    content: " ";
+    height: .05px;
+    display: block;
+    background-color: inherit;
+  }
+}
+
+.card-title {
+  margin: .5rem 0 .4rem;
+  padding: 0 $card-pd;
+  font-size: .36rem;
+  color: #0D0D0F;
+}
+
+.card-hint {
+  margin: .23rem 0 .5rem;
+  padding: 0 $card-pd;
+  color: #80888C;
+  font-size: .22rem;
+  .emphasis {
+    font-weight: bold;
+  }
+}
+
+// 一级分类
+.cate-l1-item {
+  .cate-l1-title {
+    padding: 0 $card-pd;
+    margin: .5rem 0 .4rem;
+    font-size: .32rem;
+    font-weight: $font-medium;
+    color: rgba(0, 0, 0, .87);
+  }
+  .tags-l1 {
+    padding: 0 $card-pd;
+    margin-bottom: .5rem;
+  }
+}
+
+// 一级标签详情
+.tag-l1-detail {
+  padding: .45rem .4rem;
+  margin: .45rem 0 0;
+  background: url(~src/assets/images/mobile/cancer/btn.png) #F7F7F8 no-repeat right center;
+  background-size: .71rem;
+  background-origin: content-box;
+  position: relative;
+  font-size: initial;
+  &::before,
+  &::after {
+    @include setBottomLine(#eee);
+  }
+  &::before {
+    top: -2px;
+  }
+  .tag-l1-title {
+    margin-bottom: .34rem;
+    font-size: .34rem;
+    font-weight: $font-medium;
+    color: #303135;
+  }
+  .tag-l1-desc {
+    margin-right: 1.11rem;
+    font-size: .22rem;
+    color: #80888C;
+    @include setLineClamp(2);
+  }
+}
+
+// 二级分类
+.cate-l2-item {
+  padding: .4rem;
+  margin: .45rem 0 0;
+  position: relative;
+  background: #F7F7F8;
+  &::before,
+  &::after {
+    @include setBottomLine(#eee);
+  }
+  &::before {
+    top: -2px;
+  }
+  .cate-l2-title {
+    color: #4A4B4C;
+    font-size: .28rem;
+    font-weight: $font-medium;
+    margin-bottom: .3rem;
+  }
+}

@@ -1,0 +1,385 @@
+@import '~src/assets/style/common-util';
+.btn-link {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  @include setTouchBackground;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.md {
+  word-wrap: break-word;
+  h2 {
+    font-size: .35rem;
+    margin: .6rem 0 .4rem 0;
+    color: #0d0d0f;
+  }
+  h3 {
+    font-size: .33rem;
+  }
+  strong {
+    color: #0d0d0f;
+  }
+  p {
+    margin-bottom: .4rem;
+    text-align: justify;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ul,
+  ol {
+    padding-left: .4rem;
+    li {
+      margin-bottom: .4rem;
+      &:first-child {
+        margin-top: .4rem;
+      }
+    }
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  sup,
+  sub {
+    font-size: .22rem;
+  }
+  sup {
+    &.reference-index {
+      color: #06BA8E;
+      cursor: pointer;
+    }
+  }
+}
+
+blockquote {
+  font-family: FZXSSJW--GB1-0, "宋体";
+  font-size: .3rem;
+  color: #404247;
+  line-height: .56rem;
+  background: #E0EEE4;
+  padding: .36rem .32rem 0.01rem;
+  margin-bottom: .36rem;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/*code{
+  font-family: FZXSSJW--GB1-0,"宋体";
+  font-size: .3rem;
+  color: #303135;
+  line-height: .56rem;
+  background: #F1F0EE;
+}*/
+
+// 1.19文章关联内容
+.relative-content-wrapper {
+  display: none;
+}
+
+div.related-docs-wrapper {
+  width: 6.86rem;
+  background: #FFFFFF;
+  box-shadow: 0 .1rem .2rem 0 rgba(243, 242, 242, 0.75);
+  border-radius: .12rem;
+  padding: 0;
+  list-style: none;
+  .related-docs-content {
+    line-height: .82rem;
+    margin: 0;
+    font-size: .28rem;
+    color: #80888C;
+    position: relative;
+    &:last-of-type {
+      .related-docs-content-inner-span {
+        border-bottom: none;
+        margin-bottom: .48rem;
+      }
+    }
+    .related-docs-content-link {
+      display: block;
+      padding-left: .9rem;
+      .related-docs-content-icon {
+        display: block;
+        width: .9rem;
+        height: .81rem;
+        background-size: .36rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .related-docs-content-icon-all {
+        background-image: url(~src/assets/images/mobile/ddetail/relative-link-icon-all.png);
+      }
+      .related-docs-content-icon-1 {
+        background-image: url(~src/assets/images/mobile/ddetail/relative-link-icon-1.png);
+      }
+      .related-docs-content-icon-2 {
+        background-image: url(~src/assets/images/mobile/ddetail/relative-link-icon-1.png);
+      }
+      .related-docs-content-icon-8 {
+        background-image: url(~src/assets/images/mobile/ddetail/relative-link-icon-8.png);
+      }
+      .related-docs-content-icon-11 {
+        background-image: url(~src/assets/images/mobile/ddetail/relative-link-icon-11.png);
+      }
+      .related-docs-content-icon-doc-list,
+      .related-docs-content-icon-url {
+        background-image: url(~src/assets/images/mobile/ddetail/relative-link-icon-link.png);
+      }
+    }
+    .related-docs-content-inner-span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-bottom: 0.01rem solid #e4e4e3;
+      .related-docs-content-title {
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 5.04rem;
+        overflow: hidden;
+      }
+      .related-docs-content-arrow-right {
+        width: .36rem;
+        height: .81rem;
+        display: block;
+        background: url(~src/assets/images/mobile/my/chevron_s.png) no-repeat center center;
+        background-size: .36rem;
+        position: absolute;
+        right: .35rem;
+        top: 0;
+      }
+    }
+  }
+  a[title] {
+    .annotation-span {
+      padding: 0;
+      border: none;
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+  tbody {
+    display: block;
+    overflow-x: auto;
+    max-width: 6.78rem;
+  }
+  tr:first-child {
+    font-weight: bold;
+  }
+  th,
+  td {
+    border: 1px solid #d8d8d8;
+    background: transparent;
+    min-width: .52rem;
+    font-size: .26rem;
+    line-height: 1.7;
+    padding: .2rem;
+    text-align: justify;
+    p {
+      margin-bottom: 0 !important;
+      text-indent: 0 !important;
+      font-size: .26rem !important;
+      line-height: 1.7 !important;
+      text-align: inherit !important;
+    }
+  }
+}
+
+.chnl-popup {
+  display: none;
+  .mask {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .85);
+  }
+  .content {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 6.2rem;
+    height: 7.8rem;
+    .close {
+      position: absolute;
+      width: 1.07rem;
+      height: .68rem;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
+    .image {
+      width: 100%;
+    }
+  }
+}
+
+.dropload-up,
+.dropload-up-custom {
+  opacity: 0;
+  font-size: .32rem;
+  transition: all 0.5s;
+  position: relative;
+  img {
+    height: 100%;
+  }
+  &.strech {
+    animation: drop-strech ease 1.5s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes drop-strech {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 50px;
+  }
+}
+
+.disscroll {
+  //弹窗需要禁止页面其他滚动
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100%;
+}
+// 急救页面搜索
+.show-searcher {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  .home {
+      opacity: 0;
+  }
+}
+.debug-info {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  margin-left: -2.5rem;
+  width: 5rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 0.12rem;
+  word-break: break-all;
+  height: 6.5rem;
+  padding: .2rem;
+  border-radius: .1rem;
+  z-index: 100000;
+  .log-content {
+    overflow-y: scroll;
+    height: 5.5rem;
+    margin-bottom: .3rem;
+  }
+  .btn-log-get,
+  .btn-log-send,
+  .btn-log-clear {
+    width: 1.2rem;
+    height: .5rem;
+    border-radius: .08rem;
+    float: left;
+    line-height: .5rem;
+    text-align: center;
+  }
+  .btn-log-get {
+    background: #06ba8e;
+  }
+  .btn-log-send {
+    background: #f00;
+    float: right;
+  }
+  .btn-log-clear {
+    background: #3385ff;
+    float: left;
+    margin: 0 .6rem;
+  }
+}
+
+// 正在加载中动画
+.dotting {
+  font-size: 0;
+  vertical-align: middle;
+  i {
+    height: 0.08rem;
+    width: 0.08rem;
+    border-radius: 0.04rem;
+    margin-right: 0.12rem;
+    background-color: #B8BFC4;
+    display: inline-block;
+    opacity: 0;
+    vertical-align: middle;
+    &:nth-child(1) {
+      animation: dot 1.5s -1s infinite step-start both;
+    }
+    &:nth-child(2) {
+      animation: dot 1.5s -.5s infinite step-start both;
+    }
+    &:nth-child(3) {
+      animation: dot 1.5s 0s infinite step-start both;
+    }
+  }
+}
+
+@keyframes dot {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.reload{
+  position:fixed;
+  width:.8rem;
+  height:.8rem;
+  background:{
+    image:url(~src/assets/images/mobile/common/reload.png);
+    repeat:no-repeat;
+    position:center;
+    size:contain;
+  }
+  // margin:auto;
+  bottom:1.4rem;
+  // left:0;
+  right:.3rem;
+  z-index:101;
+}

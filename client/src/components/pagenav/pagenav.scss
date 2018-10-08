@@ -1,0 +1,107 @@
+@import "~src/assets/style/common-util";
+
+.pagenav {
+  position: fixed;
+  height: 0.92rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 0;
+  background-color: #ffffff;
+  display: flex;
+  font-weight: 600;
+  z-index: 100;
+  border-top: 1px solid $border-color;
+
+  .tab {
+    flex: 1;
+    color: #80888C;
+
+    .icon {
+      display: block;
+      margin: 0 auto;
+      width: 0.4rem;
+      height: 0.4rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: .4rem .4rem;
+    }
+
+    .name {
+      font-size: 0.2rem;
+    }
+
+    &.active {
+      color: #06BA8E;
+    }
+
+    .loading {
+      width: .4rem;
+      height: .4rem;
+      animation: loading-loop linear .5s infinite;
+    }
+
+    .img {
+      width: 0.4rem;
+      height: 0.4rem;
+    }
+
+    &.health {
+      .icon {
+        background-image: url(~src/assets/images/mobile/common/health_inactive.png);
+      }
+
+      &.active {
+        .icon {
+          background-image: url(~src/assets/images/mobile/common/health_active.png);
+        }
+      }
+    }
+
+    &.search {
+      .icon {
+        background-image: url(~src/assets/images/mobile/common/search_inactive.png);
+      }
+
+      &.active {
+        .icon {
+          background-image: url(~src/assets/images/mobile/common/search_active.png);
+        }
+      }
+    }
+
+    &.my {
+      .icon {
+        background-image: url(~src/assets/images/mobile/common/my_inactive.png);
+      }
+
+      &.active {
+        .icon {
+          background-image: url(~src/assets/images/mobile/common/my_active.png);
+        }
+      }
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+@keyframes loading-loop {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

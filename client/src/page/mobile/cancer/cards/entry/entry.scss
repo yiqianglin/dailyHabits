@@ -1,0 +1,118 @@
+@import '~src/assets/style/common-util';
+$card-bg: #fefefe;
+$card-pd: .32rem;
+$card-shadow: 0 .03rem .07rem 0 rgba(216, 216, 216, .37);
+// 直达型入口
+.entry-wrapper {
+  margin-top: .5rem;
+  height: 1.78rem;
+  overflow: hidden;
+  @include hideScrollbar;
+  /* &.single {
+    .entry-item {
+      background: url(~src/assets/images/mobile/overview/bg.png) #fff no-repeat right top;
+      background-size: auto 1rem;
+    }
+  } */
+  &.double {
+    height: 2.08rem;
+    .entry-list {
+      height: 2.32rem;
+    }
+    .entry-item {
+      min-width: 3.07rem;
+      height: 1.8rem;
+      &:nth-child(2n) {
+        background: #e6f0f9;
+      }
+      .name {
+        font-size: .3rem;
+        margin: .24rem 0 0;
+        color: rgba(0, 0, 0, .7);
+        @include setLineClamp(2);
+      }
+      .desc {
+        margin: 0 0 .27rem;
+        font-size: .22rem;
+        color: #999;
+      }
+    }
+  }
+  &.multi {
+    height: 2.08rem;
+    &::after,
+    &::before {
+      padding: .11rem;
+    }
+    .entry-list {
+      height: 2.32rem;
+    }
+    .entry-item {
+      min-width: 2.75rem;
+      padding: 0 .25rem;
+      height: 1.8rem;
+      margin: 0 .1rem;
+      &:nth-child(2n) {
+        background: #e6f0f9;
+      }
+      .name {
+        font-size: .3rem;
+        margin: .24rem 0 0;
+        color: rgba(0, 0, 0, .7);
+        @include setLineClamp(2);
+      }
+      .desc {
+        margin: 0 0 .27rem;
+        font-size: .22rem;
+        color: #999;
+      }
+    }
+  }
+  .entry-list {
+    // padding: 0 $card-pd;
+    // margin: 0 -.08rem;
+    height: 2.02rem;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    &::after,
+    &::before {
+      content: " ";
+      width: 0;
+      height: 0;
+      padding: .12rem;
+      display: inline-block;
+    }
+  }
+  .entry-item {
+    flex: 1;
+    margin: 0 .08rem;
+    height: 1.5rem;
+    padding: 0 .25rem;
+    border-radius: .08rem;
+    /* border-top: .08rem solid #44BA9A;
+    box-shadow: $card-shadow; */
+    box-sizing: border-box;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    background: #e6f9f6;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .name {
+      margin: .33rem 0 0;
+      font-size: .32rem;
+      color: rgba(0, 0, 0, .87);
+      @include setLineClamp(1);
+    }
+    .desc {
+      font-size: .26rem;
+      margin: 0 0 .32rem;
+      color: rgba(0, 0, 0, .54);
+      @include setLineClamp(1);
+    }
+  }
+}

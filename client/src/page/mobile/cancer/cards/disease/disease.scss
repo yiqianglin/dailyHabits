@@ -1,0 +1,128 @@
+@import '~src/assets/style/common-util';
+$card-bg: #fefefe;
+$card-pd: .32rem;
+$card-shadow: 0 .06rem .08rem 0 rgba(227, 228, 228, .60);
+// 疾病题头卡片
+.card-wrapper {
+  padding: .4rem 0 .3rem;
+  background: url(~src/assets/images/mobile/cancer/cancer_bg.png) no-repeat center/cover;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.disease-intro {
+  padding: 0 .4rem;
+  .name {
+    font-size: .56rem;
+    color: #FFFFFF;
+    opacity: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 3rem;
+    vertical-align: middle;
+  }
+  .follow-btn {
+    width: 1.2rem;
+    flex-shrink: 0;
+    height: .51rem;
+    border-radius: 1rem;
+    font-size: .28rem;
+    color: #FFFFFF;
+    line-height: .51rem;
+    display: inline-block;
+    text-align: center;
+    margin-left: .3rem;
+    border: 1px solid rgba(255, 255, 255, .6);
+  }
+}
+
+.csco {
+  position: absolute;
+  top: .4rem;
+  right: .4rem;
+  text-align: right;
+  font-size: 0;
+  .csco-logo {
+    width: 1.11rem;
+    height: auto;
+  }
+  .csco-title {
+    font-size: .22rem;
+    color: rgba($color: #fff, $alpha: .6);
+  }
+}
+
+.alias {
+  padding: 0 .4rem;
+  font-size: .24rem;
+  color: #b7eae9;
+}
+
+.review-wrapper {
+  background: #fff;
+  height: 1.58rem;
+  overflow: hidden;
+  @include hideScrollbar;
+  .review-list {
+    &.multi {
+      display: flex;
+      align-items: flex-start;
+      height: 1.58rem+.12rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      .review-item {
+        width: 5.06rem;
+        flex-shrink: 0;
+      }
+    }
+  }
+  .review-item {
+    display: flex;
+    align-items: center;
+    padding: .4rem .18rem .3rem .4rem;
+    img {
+      width: .82rem;
+      height: .82rem;
+      margin-right: .18rem;
+      border-radius: 50%;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .name {
+      font-size: .32rem;
+      color: rgba($color: #000, $alpha: .87);
+      font-weight: $font-medium;
+    }
+    .review-text {
+      font-size: .24rem;
+      color: rgba($color: #000, $alpha: .87);
+      margin-left: .08rem;
+    }
+    .position {
+      font-size: .28rem;
+      color: rgba($color: #000, $alpha: .54);
+    }
+  }
+}
+
+.webmd {
+  margin-top: .7rem;
+  padding: 0 .4rem;
+  .img{
+    font-size:0;
+    img {
+      height: .28rem;
+    }
+  }
+  .desc{
+    margin-top:.04rem;
+    font-size: .28rem;
+    color: #FFFFFF;
+    line-height:.4rem;
+  }
+}

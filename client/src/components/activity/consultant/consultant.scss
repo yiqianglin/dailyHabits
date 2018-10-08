@@ -1,0 +1,148 @@
+@import '~src/assets/style/common-util';
+
+.consultant {
+  background-color: #f8fbfb;
+  @include hideScrollbar;
+
+  .header {
+    padding: 0.56rem 0.36rem 0.36rem;
+    font-size: 0.26rem;
+    color: #80888C;
+  }
+
+  .wrapper {
+    height: 5.72rem;
+    overflow: hidden;
+  }
+}
+
+.experts {
+  height: 5.84rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  font-size: 0;
+
+  li {
+    list-style: none;
+    display: inline-flex;
+    margin-right: 0.24rem;
+
+    &:first-child {
+      margin-left: 0.36rem;
+    }
+
+    &:last-child {
+      margin-right: 0.36rem;
+    }
+  }
+}
+
+.expert {
+  width: 5rem;
+  height: 5rem;
+  padding: 0.36rem;
+  box-sizing: border-box;
+  font-size: 0.26rem;
+  color: #80888C;
+  background: #fff;
+  box-shadow: 0 0.16rem 0.36rem 0 rgba(0,0,0,0.05);
+  border-radius: 0.16rem;
+}
+
+.personal {
+  position: relative;
+
+  .avatar {
+    width: 0.88rem;
+    height: 0.88rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .info {
+    margin-left: 1.04rem;
+    margin-bottom: 0.36rem;
+
+    p {
+      white-space: normal;
+      @include setLineClamp(1);
+    }
+
+    .name {
+      font-size: 0.34rem;
+      color: #0D0D0F;
+
+      img {
+        margin-left: 0.1rem;
+        margin-bottom: 0.1rem;
+        width: 0.41rem;
+        height: 0.41rem;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.depart {
+  white-space: normal;
+  @include setLineClamp(1);
+}
+
+.circle {
+  width: 0.06rem;
+  height: 0.06rem;
+  display: inline-block;
+  line-height: 0.26rem;
+  vertical-align: middle;
+  margin: 0 0.12rem;
+  border-radius: 50%;
+  background: #80888C;
+}
+
+.goodat {
+  margin-top: 0.36rem;
+  margin-bottom: 0.1rem;
+  padding-top: 0.28rem;
+  line-height: 0.46rem;
+  position: relative;
+  white-space: normal;
+  height: 1.38rem;
+  @include setLineClamp(3);
+
+  &::after {
+    @include setBottomLine(#e3e6ea);
+    top: 0;
+  }
+}
+
+.follow {
+  width: 1.75rem;
+  height: 0.56rem;
+  margin: 0 auto;
+  line-height: 0.56rem;
+  font-size: 0.26rem;
+  text-align: center;
+  color: #03b98c;
+  border-radius: 0.4rem;
+  border: 0.02rem solid #03b98c;
+  background: rgba(255, 255, 255, .08);
+  box-sizing: border-box;
+
+  &:active {
+    background: rgba(255, 255, 255, .12);
+  }
+
+  &.followed {
+    background: #03b98c;
+    color: #fff;
+
+    &:active {
+      opacity: 0.85;
+    }
+  }
+}

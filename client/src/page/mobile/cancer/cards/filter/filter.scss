@@ -1,0 +1,312 @@
+@import '~src/assets/style/common-util';
+$card-bg: #fefefe;
+$card-pd: .4rem;
+$card-shadow: 0 .06rem .08rem 0 rgba(227, 228, 228, .60);
+// 带筛选器卡片
+.card-wrapper {
+  &::after {
+    content: " ";
+    height: .05px;
+    display: block;
+    background-color: inherit;
+  }
+}
+
+.card-title {
+  margin: .5rem 0 .4rem;
+  padding: 0 $card-pd;
+  font-size: .36rem;
+  font-weight: $font-medium;
+  color: #0D0D0F;
+}
+
+.card-hint {
+  margin: .4rem 0 0;
+  padding: 0 $card-pd;
+  font-size: .22rem;
+  color: #80888C;
+}
+
+.filter-brief {
+  margin: .2rem 0 .5rem;
+  padding: 0 $card-pd;
+  font-size: .24rem;
+  color: #80888c;
+  text-indent: .48rem;
+  background: url(~src/assets/images/mobile/cancer/hint.png) no-repeat left top/.32rem;
+  background-origin: content-box;
+  .more {
+    margin-left: .14rem;
+    color: #25CC9A;
+  }
+}
+
+.filters-inline {
+  margin: .33rem -.07rem -.07rem;
+  padding: 0 $card-pd;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .filters-group {
+    width: 3.08rem;
+    margin: .07rem;
+  }
+}
+
+.filters-select {
+  .btn-select {
+    margin: .5rem $card-pd 0;
+    background: linear-gradient(-135deg, #0DB6A4, #00C79B);
+    border-radius: .1rem;
+    height: .92rem;
+    line-height: .92rem;
+    text-align: center;
+    font-size: .3rem;
+    color: #fff;
+  }
+  .select-detail {
+    padding: .42rem 1.5rem .42rem 0;
+    margin: 0 $card-pd;
+    position: relative;
+    &::after {
+      @include setBottomLine($border-color);
+    }
+    .filters-title {
+      font-size: .4rem;
+      color: #000;
+      span:not(:last-child) {
+        margin-right: .2rem;
+      }
+    }
+    .article-title {
+      margin-top: .1rem;
+      font-size: .28rem;
+      color: rgba(0, 0, 0, .8);
+    }
+    .article-more {
+      color: #06ba8e;
+      text-decoration: underline;
+    }
+    .btn-change {
+      background: linear-gradient(-135deg, #0DB6A4, #00C79B);
+      border-radius: .08rem;
+      width: 1.2rem;
+      height: .6rem;
+      line-height: .6rem;
+      text-align: center;
+      font-size: .28rem;
+      color: #fff;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.filters-picker {
+  width: 7.5rem;
+}
+
+// 一级分类
+.cate-l1-item {
+  .cate-l1-title {
+    padding: 0 $card-pd;
+    margin: .5rem 0 .4rem;
+    font-size: .32rem;
+    font-weight: $font-medium;
+    color: rgba(0, 0, 0, .87);
+  }
+  .tags-l1 {
+    padding: 0 $card-pd;
+    margin-bottom: .4rem;
+  }
+}
+
+// 二级分类
+.cate-l2-item {
+  padding: $card-pd $card-pd 0;
+  margin: .4rem 0;
+  position: relative;
+  &:first-child::before {
+    @include setBottomLine(#eee, $card-pd);
+    top: 0;
+  }
+  .cate-l2-title {
+    color: #303135;
+    font-size: .28rem;
+    font-weight: $font-medium;
+    margin-bottom: .3rem;
+  }
+}
+
+.toast-no-content {
+  position: fixed;
+  width: 4rem;
+  height: 4rem;
+  font-size: 0.3rem;
+  background: rgba(0, 0, 0, .68);
+  border-radius: 0.08rem;
+  color: #fff;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.5s ease;
+  text-align: center;
+  padding-top: 0.72rem;
+  z-index: 10;
+  box-sizing: border-box;
+  .icon {
+    width: 1.56rem;
+    height: 1.56rem;
+    display: block;
+    margin: 0 auto 0.24rem;
+    background: url("~src/assets/images/mobile/overview_zl/no-filter-data.png") no-repeat center;
+    background-size: contain;
+  }
+  &.show {
+    opacity: 1;
+  }
+}
+
+.slide-toast-fade-enter-active {
+  transition: all .5s ease;
+}
+
+.slide-toast-fade-leave-active {
+  transition: all .5s ease;
+}
+
+.slide-toast-fade-enter,
+.slide-toast-fade-leave-to {
+  opacity: 0;
+}
+
+/* 
+/deep/ .multiselect {
+  .multiselect__option--selected,
+  .multiselect__option--selected.multiselect__option--highlight,
+  .multiselect__option--highlight {
+    font-size: .28rem;
+    background-color: #fff;
+    color: #35495e;
+  }
+  .multiselect__content-wrapper {
+    max-height: 300px !important;
+  }
+  .multiselect__select {
+    &::before {
+      display: inline-block;
+      width: 0.28rem;
+      height: auto;
+      border: none;
+      background: url(~src/assets/images/mobile/clinical_recruitment/arr_down.png) no-repeat center/contain;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  .multiselect__tags {
+    border: none;
+    border-radius: 0.06rem;
+    background: #f7f7f8;
+    padding-top: 10px;
+    .multiselect__single,
+    .multiselect__input {
+      background: #f7f7f8;
+      margin-bottom: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: .28rem;
+    }
+  }
+}
+ */
+
+.picker-header {
+  height: 1.05rem;
+  line-height: 1.05rem;
+  text-align: center;
+  color: #000000;
+  position: relative;
+  &::after {
+    @include setBottomLine(#e5e5e5);
+  }
+  .confirm-btn {
+    font-size: .28rem;
+    color: #06BA8E;
+    position: absolute;
+    top: 0;
+    right: .28rem;
+  }
+  .reset-btn {
+    font-size: .28rem;
+    color: #06BA8E;
+    position: absolute;
+    top: 0;
+    left: .28rem;
+  }
+}
+
+.filter-article {
+  width: 7.5rem;
+  .title {
+    margin: 0 0 .27rem;
+    padding: .46rem $card-pd * 3 .36rem;
+    text-align: center;
+    font-size: .36rem;
+    color: #04A981;
+    position: relative;
+    .close {
+      background: url(~src/assets/images/mobile/actionbar/close.png) no-repeat center/contain;
+      position: absolute;
+      width: 0.24rem;
+      height: 0.24rem;
+      right: 0.24rem;
+      top: 0.24rem;
+    }
+    &::after {
+      @include setBottomLine(rgba(0, 0, 0, .08),
+      $card-pd,
+      $card-pd);
+    }
+  }
+  .content {
+    max-height: 5.6rem;
+    padding: 0 $card-pd $card-pd;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: .3rem;
+    color: rgba(0, 0, 0, .8);
+    /deep/ .related-docs-wrapper {
+      display: none;
+    }
+  }
+}
+
+/deep/ .picker-content {
+  height: 60vh;
+  .picker-column {
+    &:not(:first-child) {
+      .column-header-default,
+      .column-option-default {
+        padding-left: .8rem;
+      }
+    }
+  }
+}
+
+/deep/ .mint-popup {
+  z-index: 4 !important;
+}
+
+/deep/ .v-modal {
+  z-index: 3 !important;
+}

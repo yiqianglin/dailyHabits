@@ -1,0 +1,17 @@
+@import '~src/assets/style/common-util';
+@mixin setBackground($url) {
+  background: {
+    image: url($url);
+    repeat: no-repeat;
+    position: center;
+    size: contain;
+  }
+}
+
+.container {
+  background: #F3F3F3;
+  width: 7.5rem;
+  margin: 0 auto;
+  padding-top:.88rem;
+  overflow-x:hidden;
+}

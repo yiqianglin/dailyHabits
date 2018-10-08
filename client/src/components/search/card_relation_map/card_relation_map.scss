@@ -1,0 +1,78 @@
+@import '~src/assets/style/common-util';
+.card-container {
+  padding: .4rem .36rem;
+}
+
+.card-wrapper {
+  background: #FFFFFF;
+  box-shadow: 0 0.18rem 0.38rem 0 rgba(0, 0, 0, 0.05);
+  border-radius: 0.16rem;
+}
+
+.card-answer {
+  font-size: .28rem;
+  color: #303435;
+  padding: .4rem .36rem;
+  .answer-content {
+    @include setLineClamp(8);
+  }
+  .answer-para {
+    padding-left: .14rem;
+    line-height: .42rem;
+    &::before {
+      content: "\201C";
+      font-size: .3rem;
+      margin-left: -.14rem;
+      margin-right: .05rem;
+    }
+    &::after {
+      content: "\201D";
+      font-size: .3rem;
+    }
+  }
+  .answer-list {
+    padding-left: .4rem;
+    list-style-type: none;
+    li {
+      margin: .12rem 0;
+      &::before {
+        content: " ";
+        margin-right: .3rem;
+        margin-left: -.4rem;
+        background: #06BA8E;
+        width: .1rem;
+        height: .1rem;
+        display: inline-block;
+        border-radius: 50%;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.card-article {
+  position: relative;
+  padding: 0 .36rem .3rem;
+  &::before {
+    @include setBottomLine( #E3E6EA);
+    top: 0;
+  }
+  .header {
+    color: #b8bfc4;
+    font-size: .26rem;
+    padding: .3rem 0 .2rem;
+  }
+  .content {
+    padding-right: .16rem;
+    background: url(~src/assets/images/mobile/doctor/green-arrow.png) no-repeat right;
+    background-size: .13rem .25rem;
+  }
+  .title {
+    font-size: .28rem;
+    color: #151517;
+    @include setLineClamp(2);
+  }
+  /deep/ .author {
+    margin-top: .08rem;
+  }
+}

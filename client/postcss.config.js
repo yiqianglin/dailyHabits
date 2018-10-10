@@ -19,6 +19,10 @@ const postcssConfig = {
     app: ['Android >= 4', 'iOS >= 6', 'Chrome >= 21', 'safari >= 4']
   },
   postcssPxtorem: {
+    // rootValue: 750 / 16,
+    // minPixelValue: 1,
+    // propWhiteList: [],
+    // unitPrecision: 5
     root_value: '100', // 基准值 html{ font-zise: 20px; }
     prop_white_list: [], // 对所有 px 值生效
     minPixelValue: 1 // 忽略 1px 值
@@ -31,8 +35,8 @@ function getAppConfig() {
     autoprefixer({
       browsers: postcssConfig.autoprefixer['app'],
       remove: false
-    })
-    // pxtorem(postcssConfig.postcssPxtorem)
+    }),
+    pxtorem(postcssConfig.postcssPxtorem)
   );
   return config;
 }

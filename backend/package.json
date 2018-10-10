@@ -1,0 +1,40 @@
+{
+  "name": "news-box-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node app.js",
+    "pm2": "pm2 start processes.json",
+    "dev": "nodemon --exec npm run start app.js"
+  },
+  "author": "crcrcry",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.5.0",
+    "body-parser": "^1.15.2",
+    "cheerio": "^0.22.0",
+    "ejs": "^2.5.6",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "helmet": "^3.8.1",
+    "http": "^0.0.0",
+    "merge": "^1.2.0",
+    "mysql": "^2.12.0",
+    "qiniu": "^6.1.13"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
+    "babel-plugin-transform-es2015-spread": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-transform-strict-mode": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "nodemon": "^1.11.0"
+  }
+}

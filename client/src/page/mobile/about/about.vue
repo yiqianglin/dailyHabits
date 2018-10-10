@@ -1,6 +1,5 @@
 <template>
   <div v-cloak id="main" class="container">
-    <tmenu name="关于"/>
     <div class="list-body">
       <div class="banner">
         <div class="t1">企鹅医典·传递健康与信赖</div>
@@ -15,10 +14,8 @@
 </template>
 
 <script>
-import tmenu from 'components/tmenu/tmenu.vue'
 export default {
   components: {
-    tmenu
   },
   activated () {
   }
@@ -26,5 +23,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import './about.scss'
+  @import './about.scss';
 </style>

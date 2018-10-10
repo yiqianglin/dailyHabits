@@ -1,0 +1,9 @@
+build/*.js
+build/
+config/*
+src/libs
+src/routes.js
+src/page/mobile/babylon
+src/page/mobile/errorTest/errorTest.vue
+src/components/searcher/searcher.vue
+htdocs/

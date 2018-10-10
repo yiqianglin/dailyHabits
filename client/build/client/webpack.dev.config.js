@@ -70,6 +70,12 @@ module.exports = merge(baseWebpackConfig, {
                 }
               },
               {
+                loader: 'postcss-loader', // 这一层输出没有了注释
+                options: {
+                  sourceMap: true
+                }
+              },
+              {
                 'loader': 'sass-loader',
                 'options': {
                   'sourceMap': true
@@ -87,11 +93,7 @@ module.exports = merge(baseWebpackConfig, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.dev.env,
-      '_ENV_': "'development'",
-      '_MTA_': {
-        sid: config.build.mta.testing.sid,
-        cid: config.build.mta.testing.cid
-      }
+      '_ENV_': "'development'"
     }),
     new FriendlyErrorsPlugin(),
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage

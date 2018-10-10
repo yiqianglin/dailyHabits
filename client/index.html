@@ -68,41 +68,9 @@
   <% if(_ENV_ !== 'development') { %>
     <script onload="loadScript(this)" crossorigin="anonymous" src="//s.pc.qq.com/tdf/baike/raven.report.vue.min.js"></script>
   <% } %>
-  <% if(_ENV_ === 'testing') { %>
-    <script>
-      Raven.config('https://fe72e4b88b2e483887ebb6202f435fef@sentry.io/1225514').install({ // 优化？
-          environment: "<%= _ENV_  === 'production' ? 'production' : 'test' %>",
-          release: "<%- _VERSION_ %>"
-      })
-    </script>
-  <% } %>
-  <% if(_ENV_ === 'production') { %>
-    <script>
-      Raven.config('https://7493cb8cf62f46d9acd62071634a45f3@report.url.cn/sentry/29', {
-          environment: "<%= _ENV_  === 'production' ? 'production' : 'test' %>",
-          release: "<%- _VERSION_ %>",
-          whitelistUrls: [/baike.*\.qq.com/, /s\.pc\.qq\.com/]
-      }).install();
-    </script>
-  <% } %>
-
 
   <script onload="loadScript(this)" onerror="loadError(this)" src="//s.pc.qq.com/tdf/baike/zepto.1.2.0.min.js"></script>
-  <!-- <script src="//vm.gtimg.cn/tencentvideo/txp/js/txplayer.js"></script> -->
-  <!-- <script src="//y.gtimg.cn/music/h5/player/player.js?max_age=2592000"></script> -->
   <script onload="loadScript(this)" onerror="loadError(this)" src="//res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
-  <script onload="loadScript(this)" onerror="loadError(this)" src="//jsapi.qq.com/get?api=app.setShareInfo"></script>
-  <script>
-    var _mtac = {
-      "performanceMonitor": 1,
-      "senseQuery": 1
-    };
-  </script>
-  <script onload="loadScript(this)" onerror="loadError(this)" src="//pingjs.qq.com/h5/stats.js?v2.0.4" name="MTAH5" sid="<%- _MTA_.sid %>" cid="<%- _MTA_.cid %>"></script>
-
-  <% if(_ENV_ === 'production') { %>
-    <script id="MTIMER" name="MTIMER" proj="7493cb8cf62f46d9acd62071634a45f3" env="production" mode="common" src="//s.pc.qq.com/tdf/med-timer.min.js"></script>
-  <% } %>
 </body>
 
 </html>

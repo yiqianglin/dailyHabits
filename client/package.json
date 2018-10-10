@@ -29,6 +29,7 @@
     "vue-awesome-swiper": "^2.6.7",
     "vue-meta": "^1.5.0",
     "vue-router": "^3.0.1",
+    "vue-server-renderer": "^2.5.17",
     "vue-slide-bar": "^1.1.2",
     "vuex": "^3.0.1",
     "vuex-router-sync": "^5.0.0"
@@ -40,6 +41,7 @@
     "babel-loader": "^7.1.4",
     "babel-plugin-component": "^1.1.1",
     "babel-plugin-dynamic-import-webpack": "^1.0.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",

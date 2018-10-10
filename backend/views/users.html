@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title %></title>
+	<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+	<h2><%= title %></h2>
+	<p>这里是users.html</p>
+	<% for(var i = 0; i < users.length; i++){%>
+		<div>
+			<p>用户<%= i%></p>
+		    <p>id: <%= users[i].userId %></p>
+		    <p>name: <%= users[i].userName %></p>
+		    <p>phone: <%= users[i].phone %></p>
+		</div>
+	<%}%>
+
+	<script>
+		console.log('script')
+	</script>
+</body>
+</html>

@@ -20,7 +20,7 @@ module.exports = {
     hints: isBuilding ? 'warning' : false
   },
   entry: {
-    app: './src/index.js'
+    app: './src/entry-client.js'
   },
   output: {
     path: config.build.assetsRoot, // '/'

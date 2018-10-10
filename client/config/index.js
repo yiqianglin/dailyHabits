@@ -16,19 +16,7 @@ module.exports = {
     // Before setting to `true`, make sure to:
     // npm install --save-dev compression-webpack-plugin
     productionGzip: false,
-    productionGzipExtensions: ['js', 'css'],
-    mta: {
-      // 开发环境
-      testing: {
-        sid: '500500616',
-        cid: '500500617'
-      },
-      // 线上环境
-      production: {
-        sid: '500487122',
-        cid: '500487807'
-      }
-    }
+    productionGzipExtensions: ['js', 'css']
   },
   dev: {
     env: require('./dev.env'),
@@ -48,10 +36,7 @@ module.exports = {
       options: {
         // target: 'http://baikepreview.sparta.html5.qq.com',
         // target: 'http://baiketest.sparta.html5.qq.com',
-        target: 'http://baike.sparta.html5.qq.com',
-        // target: 'http://baike.sparta.html5.qq.com',
-        // target: 'http://local.baike.qq.com',
-        // target: 'http://h5.baike.qq.com',
+        target: 'http://localhost:3000',
         changeOrigin: true,
         ws: true
       }

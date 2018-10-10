@@ -1,11 +1,12 @@
 <template>
   <div class="routerView" ontouchstart="">
-    <navigation max="10">
-      <router-view/>
-    </navigation>
-    <keep-alive>
-      <component :is="searcher" />
-    </keep-alive>
+    <app-nav />
+    <transition :name="transitionName">
+      <keep-alive>
+        <router-view/>
+      </keep-alive>
+    </transition>
+    <bottom-nav></bottom-nav>
     <div v-show="reloadShow" class="reload" @click="reload()"/>
   </div>
 </template>
@@ -16,9 +17,10 @@ import { mapState } from 'vuex'
 import './assets/style/reset.scss'
 import './assets/style/global.scss'
 import 'src/js/common'
+import appNav from 'components/appNav/appNav.vue'
 export default {
+  name: 'app',
   components: {
-    'mini-searcher': () => import('components/search/mini.vue')
   },
   data () {
     return {
@@ -27,13 +29,10 @@ export default {
       reloadShow: false
     }
   },
+  components: {
+    appNav
+  },
   computed: {
-    navType () {
-      return this.$route.meta.navType || 0
-    },
-    ...mapState({
-      searcher: 'searcher'
-    })
   },
   watch: {
 
@@ -75,5 +74,6 @@ body {
 .routerView {
   flex: 1;
   display: flex;
+  flex-direction: column;
 }
 </style>

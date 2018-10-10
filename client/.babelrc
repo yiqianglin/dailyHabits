@@ -13,13 +13,7 @@
             "plugins": [
                 "transform-runtime",
                 "transform-object-rest-spread",
-                "babel-plugin-syntax-dynamic-import",
-                ["component", [
-                    {
-                    "libraryName": "mint-ui",
-                    "style": true
-                    }
-                ]]
+                "babel-plugin-syntax-dynamic-import"
             ]
         },
         "development": {
@@ -34,13 +28,7 @@
             ],
             "plugins": [
                 "transform-object-rest-spread",
-                "babel-plugin-syntax-dynamic-import",
-                ["component", [
-                    {
-                    "libraryName": "mint-ui",
-                    "style": true
-                    }
-                ]]
+                "babel-plugin-syntax-dynamic-import"
             ]
         }
     }

@@ -7,6 +7,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   // user-select: none;
 }
 
@@ -31,4 +32,8 @@ a {
   background: transparent;
   outline: none;
   color: inherit;
+}
+
+ol, ul, li {
+  list-style: none;
 }

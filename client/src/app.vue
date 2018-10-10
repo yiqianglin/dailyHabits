@@ -6,7 +6,7 @@
         <router-view/>
       </keep-alive>
     </transition>
-    <bottom-nav></bottom-nav>
+    <bottom-nav/>
     <div v-show="reloadShow" class="reload" @click="reload()"/>
   </div>
 </template>
@@ -19,8 +19,11 @@ import './assets/style/global.scss'
 import 'src/js/common'
 import appNav from 'components/appNav/appNav.vue'
 export default {
-  name: 'app',
+  name: 'App',
   components: {
+  },
+  components: {
+    appNav
   },
   data () {
     return {
@@ -28,9 +31,6 @@ export default {
       transitionName: 'fade',
       reloadShow: false
     }
-  },
-  components: {
-    appNav
   },
   computed: {
   },

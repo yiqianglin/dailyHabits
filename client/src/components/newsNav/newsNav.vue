@@ -1,12 +1,12 @@
 <template>
   <div class="home_nav">
-    <ul class="home_nav_list" ref="homenav">
-      <router-link 
-        v-for="(item, index) in nav" 
-        class="home_nav_item" 
+    <ul ref="homenav" class="home_nav_list">
+      <router-link
+        v-for="(item, index) in nav"
         :key="index"
         :to="item.url + '/' +item.type"
-        tag="li">{{item.text}}</router-link>
+        class="home_nav_item"
+        tag="li">{{ item.text }}</router-link>
     </ul>
   </div>
 </template>

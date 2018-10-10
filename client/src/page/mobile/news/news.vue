@@ -1,9 +1,9 @@
 <template>
   <div v-cloak class="container">
-    <news-nav></news-nav>
+    <news-nav/>
     <div>
-    sss
-    {{ $route.params }}      
+      sss
+      {{ $route.params }}
     </div>
 
   </div>

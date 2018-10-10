@@ -11,8 +11,8 @@ Vue.use(VueRouter)
 
 function netWorkErrorTo () {
   console.log('组件加载出错，刷新页面，获取最新代码')
-  location.reload()  //报错，刷新
-  return
+  location.reload() // 报错，刷新
+
   // return import(/* webpackChunkName: "home" */ './page/mobile/home/home.vue')
   //   .then((resolve) => {
   //     console.log('重定向到home组件', resolve)
@@ -73,7 +73,7 @@ export function createRouter () {
         name: 'news',
         path: '/mobile/news_:id.html',
         component: news
-      },
+      }
       // {
       //   path: '*',
       //   redirect: '/mobile/news_all.html'

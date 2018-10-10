@@ -12,11 +12,6 @@
     "build:prod_analyze": "node build/client/build.js --env=production --analyze=true",
     "lint": "eslint --ext .jsx,.js,.vue src/ --fix"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run lint"
-    }
-  },
   "dependencies": {
     "axios": "^0.18.0",
     "jquery": "^3.3.1",

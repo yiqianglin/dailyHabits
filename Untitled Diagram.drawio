@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-08-26T10:59:07.230Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="dEWCd8T9PcluY46xG6pf" version="14.9.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-26T11:16:13.011Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="u4nfXlPFaOm-nQw80gpL" version="14.9.9" type="github">
   <diagram id="idbegShHQ2HyzT-UJQHZ" name="Page-1">
-    <mxGraphModel dx="3331" dy="505" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3667" dy="675" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -488,86 +488,100 @@
           <mxGeometry x="220" y="130" width="181" height="30" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-109" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="-770" y="1610" width="730" height="350" as="geometry" />
+          <mxGeometry x="-770" y="1630" width="730" height="470" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-1" value="小程序架构升级涉及" style="swimlane;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="iWnvH-VGd3Z96sQ7piic-109" vertex="1">
-          <mxGeometry width="730" height="350" as="geometry">
+          <mxGeometry width="730" height="469.99999999999994" as="geometry">
             <mxRectangle x="270" y="60" width="90" height="23" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-38" value="前端框架" style="swimlane;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="iWnvH-VGd3Z96sQ7piic-1" vertex="1">
-          <mxGeometry x="30" y="40" width="310" height="80" as="geometry">
+          <mxGeometry x="30" y="145.96139724653537" width="310" height="82.27571115973741" as="geometry">
             <mxRectangle x="10" y="30" width="90" height="23" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-39" value="uniapp" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-38" vertex="1">
-          <mxGeometry x="20" y="35" width="130" height="30" as="geometry" />
+          <mxGeometry x="20" y="35.99562363238512" width="130" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-40" value="vuex" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-38" vertex="1">
-          <mxGeometry x="170" y="35" width="123" height="30" as="geometry" />
+          <mxGeometry x="170" y="35.99562363238512" width="123" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-43" value="流程控制" style="swimlane;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="iWnvH-VGd3Z96sQ7piic-1" vertex="1">
-          <mxGeometry x="370" y="40" width="340" height="290" as="geometry">
+          <mxGeometry x="370" y="145.96" width="340" height="304.04" as="geometry">
             <mxRectangle x="10" y="30" width="90" height="23" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-44" value="静态编译" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-43" vertex="1">
-          <mxGeometry x="20" y="40" width="140" height="30" as="geometry" />
+          <mxGeometry x="20" y="44.137855579868706" width="140" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-94" value="动态编译" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-43" vertex="1">
-          <mxGeometry x="180" y="40" width="140" height="30" as="geometry" />
+          <mxGeometry x="180" y="44.137855579868706" width="140" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-95" value="业务日志上报" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-43" vertex="1">
-          <mxGeometry x="20" y="90" width="140" height="30" as="geometry" />
+          <mxGeometry x="20" y="95.56017505470459" width="140" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-97" value="eslint校验" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-43" vertex="1">
-          <mxGeometry x="180" y="90" width="140" height="30" as="geometry" />
+          <mxGeometry x="180" y="95.56017505470459" width="140" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-98" value="aegis监控" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-43" vertex="1">
-          <mxGeometry x="20" y="140" width="140" height="30" as="geometry" />
+          <mxGeometry x="20" y="146.98249452954047" width="140" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-100" value="perfDog" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-43" vertex="1">
-          <mxGeometry x="20" y="190" width="140" height="30" as="geometry" />
+          <mxGeometry x="20" y="198.40481400437633" width="140" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-103" value="包体积分析" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-43" vertex="1">
-          <mxGeometry x="180" y="190" width="140" height="30" as="geometry" />
+          <mxGeometry x="180" y="198.40481400437633" width="140" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-104" value="CI控制" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-43" vertex="1">
-          <mxGeometry x="20" y="240" width="140" height="30" as="geometry" />
+          <mxGeometry x="20" y="249.82713347921222" width="140" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-105" value="包体积监控" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-43" vertex="1">
-          <mxGeometry x="180" y="240" width="140" height="30" as="geometry" />
+          <mxGeometry x="180" y="249.82713347921222" width="140" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-101" value="自有监控体系" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-43" vertex="1">
-          <mxGeometry x="180" y="140" width="140" height="30" as="geometry" />
+          <mxGeometry x="180" y="146.98249452954047" width="140" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-29" value="submodule兼容" style="swimlane;fillColor=#b1ddf0;strokeColor=#10739e;" parent="iWnvH-VGd3Z96sQ7piic-1" vertex="1">
-          <mxGeometry x="30" y="213" width="310" height="117" as="geometry">
+          <mxGeometry x="30" y="327.8826226294675" width="310" height="120.32822757111596" as="geometry">
             <mxRectangle x="10" y="30" width="90" height="23" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-30" value="生命周期兼容" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-29" vertex="1">
-          <mxGeometry x="19" y="35" width="131" height="30" as="geometry" />
+          <mxGeometry x="19" y="35.99562363238512" width="131" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-79" value="曝光模式兼容" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-29" vertex="1">
-          <mxGeometry x="170" y="35" width="130" height="30" as="geometry" />
+          <mxGeometry x="170" y="35.99562363238512" width="130" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-83" value="公共方法兼容" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-29" vertex="1">
-          <mxGeometry x="19" y="74" width="131" height="30" as="geometry" />
+          <mxGeometry x="19" y="76.1050328227571" width="131" height="30.853391684901528" as="geometry" />
         </mxCell>
         <mxCell id="ry6VpjhCSDhBNzy4ZAl0-1" value="自定义组件样式" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-29" vertex="1">
-          <mxGeometry x="170" y="74" width="130" height="30" as="geometry" />
+          <mxGeometry x="170" y="76.1050328227571" width="130" height="30.853391684901528" as="geometry" />
         </mxCell>
-        <mxCell id="roaec_KvJbhlK_ECuEZ8-2" value="loader规范校验" style="whiteSpace=wrap;html=1;" vertex="1" parent="iWnvH-VGd3Z96sQ7piic-1">
-          <mxGeometry x="200" y="161" width="130" height="30" as="geometry" />
+        <mxCell id="roaec_KvJbhlK_ECuEZ8-2" value="loader规范校验" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-1" vertex="1">
+          <mxGeometry x="200" y="272.4034103756382" width="130" height="30.853391684901528" as="geometry" />
+        </mxCell>
+        <mxCell id="OWfK4mWrk2_BHXDh1M9H-2" value="独立分包 + 合包工具 + 微前端" style="whiteSpace=wrap;html=1;" vertex="1" parent="iWnvH-VGd3Z96sQ7piic-1">
+          <mxGeometry x="49" y="78.33333333333333" width="191" height="30.85354166666667" as="geometry" />
+        </mxCell>
+        <mxCell id="OWfK4mWrk2_BHXDh1M9H-10" value="混合编译v1.0（框架混合）" style="whiteSpace=wrap;html=1;" vertex="1" parent="iWnvH-VGd3Z96sQ7piic-1">
+          <mxGeometry x="250" y="78.33333333333333" width="200.5" height="30.85354166666667" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-74" value="原生编译" style="swimlane;fillColor=#fff2cc;strokeColor=#d6b656;" parent="iWnvH-VGd3Z96sQ7piic-109" vertex="1">
-          <mxGeometry x="30" y="130" width="310" height="70" as="geometry">
+          <mxGeometry x="30" y="240.52157230123996" width="310" height="71.99124726477024" as="geometry">
             <mxRectangle x="10" y="30" width="90" height="23" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-78" value="cli拓展原生组件编译" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-74" vertex="1">
-          <mxGeometry x="20" y="32" width="130" height="30" as="geometry" />
+          <mxGeometry x="20" y="32.91028446389496" width="130" height="30.853391684901528" as="geometry" />
+        </mxCell>
+        <mxCell id="OWfK4mWrk2_BHXDh1M9H-1" value="方案选型" style="swimlane;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-740" y="1670" width="680" height="90" as="geometry">
+            <mxRectangle x="10" y="30" width="90" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OWfK4mWrk2_BHXDh1M9H-11" value="混合编译v2.0（框架拓展+submoduel兼容）" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-310" y="1708" width="241" height="31.51" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

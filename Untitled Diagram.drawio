@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-26T07:42:36.649Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="tudrzH2ahV8tk5BPEu5W" version="14.9.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-26T10:59:07.230Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="dEWCd8T9PcluY46xG6pf" version="14.9.9" type="github">
   <diagram id="idbegShHQ2HyzT-UJQHZ" name="Page-1">
     <mxGraphModel dx="3331" dy="505" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -549,22 +549,25 @@
         <mxCell id="iWnvH-VGd3Z96sQ7piic-30" value="生命周期兼容" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-29" vertex="1">
           <mxGeometry x="19" y="35" width="131" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="iWnvH-VGd3Z96sQ7piic-79" value="loader兼容" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-29" vertex="1">
+        <mxCell id="iWnvH-VGd3Z96sQ7piic-79" value="曝光模式兼容" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-29" vertex="1">
           <mxGeometry x="170" y="35" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-83" value="公共方法兼容" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-29" vertex="1">
           <mxGeometry x="19" y="74" width="131" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ry6VpjhCSDhBNzy4ZAl0-1" value="自定义组件样式" style="whiteSpace=wrap;html=1;" vertex="1" parent="iWnvH-VGd3Z96sQ7piic-29">
+        <mxCell id="ry6VpjhCSDhBNzy4ZAl0-1" value="自定义组件样式" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-29" vertex="1">
           <mxGeometry x="170" y="74" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="roaec_KvJbhlK_ECuEZ8-2" value="loader规范校验" style="whiteSpace=wrap;html=1;" vertex="1" parent="iWnvH-VGd3Z96sQ7piic-1">
+          <mxGeometry x="200" y="161" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="iWnvH-VGd3Z96sQ7piic-74" value="原生编译" style="swimlane;fillColor=#fff2cc;strokeColor=#d6b656;" parent="iWnvH-VGd3Z96sQ7piic-109" vertex="1">
           <mxGeometry x="30" y="130" width="310" height="70" as="geometry">
             <mxRectangle x="10" y="30" width="90" height="23" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="iWnvH-VGd3Z96sQ7piic-78" value="vue-cli拓展原生组件编译" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-74" vertex="1">
-          <mxGeometry x="20" y="32" width="280" height="30" as="geometry" />
+        <mxCell id="iWnvH-VGd3Z96sQ7piic-78" value="cli拓展原生组件编译" style="whiteSpace=wrap;html=1;" parent="iWnvH-VGd3Z96sQ7piic-74" vertex="1">
+          <mxGeometry x="20" y="32" width="130" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-19T08:52:46.546Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="qUV9BffdKBNP1oMlf9Gz" version="15.6.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-19T11:52:15.714Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="MAjozR3qLMOxLuG0swNe" version="15.6.8" type="github">
   <diagram id="fIjNd0ias1B7u1iA5vRG" name="Page-1">
-    <mxGraphModel dx="1186" dy="675" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
+    <mxGraphModel dx="1426" dy="675" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -127,7 +127,7 @@
           <mxGeometry x="1207" y="410" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="Q4Y72DybKSbmQgdLw7ZB-44" value="h5登陆调用逻辑流程" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="130" y="50" width="120" height="30" as="geometry" />
+          <mxGeometry x="138" y="22" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Q4Y72DybKSbmQgdLw7ZB-45" value="小程序登陆调用逻辑流程" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="140" y="450" width="120" height="30" as="geometry" />
@@ -147,14 +147,24 @@
         <mxCell id="Q4Y72DybKSbmQgdLw7ZB-53" value="requestCheckLogin" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="181" y="620" width="119" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Q4Y72DybKSbmQgdLw7ZB-55" value="接口请求&lt;br&gt;（异步登陆）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="Q4Y72DybKSbmQgdLw7ZB-55" value="接口请求" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="510" y="520" width="100" height="50" as="geometry" />
         </mxCell>
         <mxCell id="Q4Y72DybKSbmQgdLw7ZB-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=8;" edge="1" parent="1" source="Q4Y72DybKSbmQgdLw7ZB-56" target="Q4Y72DybKSbmQgdLw7ZB-55">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="Q4Y72DybKSbmQgdLw7ZB-76" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="Q4Y72DybKSbmQgdLw7ZB-64">
+          <mxGeometry x="-0.6667" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="Q4Y72DybKSbmQgdLw7ZB-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Q4Y72DybKSbmQgdLw7ZB-56" target="Q4Y72DybKSbmQgdLw7ZB-63">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q4Y72DybKSbmQgdLw7ZB-77" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="Q4Y72DybKSbmQgdLw7ZB-65">
+          <mxGeometry x="-0.7125" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="Q4Y72DybKSbmQgdLw7ZB-56" value="是否已登陆" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="380" y="605" width="80" height="80" as="geometry" />

@@ -1,1 +1,171 @@
-<mxfile host="app.diagrams.net" modified="2021-11-30T07:42:55.603Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" version="15.8.3" etag="ENcnP-igpKmgZVpnkgbH" type="github"><diagram id="FJ5adGuSMtsnOJoWIgwL">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-11-30T13:58:52.166Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="qfXL69O7NmMRIo_0M3Jf" version="15.8.3" type="github">
+  <diagram id="FJ5adGuSMtsnOJoWIgwL" name="Page-1">
+    <mxGraphModel dx="1606" dy="889" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nKjDSTNda_gUuitwGgr6-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="270" y="190" width="250" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=12;" edge="1" parent="1" source="nKjDSTNda_gUuitwGgr6-2" target="nKjDSTNda_gUuitwGgr6-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="nKjDSTNda_gUuitwGgr6-2" target="nKjDSTNda_gUuitwGgr6-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="312.5" y="280" width="165" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-3" value="医典" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="160" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-4" value="医典子仓" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="250" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-5" value="release/xx分支" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="160" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-6" value="release/xx分支" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="405" y="250" width="85" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="nKjDSTNda_gUuitwGgr6-7" target="nKjDSTNda_gUuitwGgr6-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-7" value="feature/xxx 特性分支" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="335" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-11" value="触发主流水线（&lt;b&gt;手动&lt;/b&gt;）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="670" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=12;" edge="1" parent="1" source="nKjDSTNda_gUuitwGgr6-23" target="nKjDSTNda_gUuitwGgr6-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-23" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="880" y="190" width="250" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-25" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="922.5" y="280" width="165" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-26" value="健康" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="880" y="160" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-27" value="dist子仓" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="920" y="250" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-28" value="yidian_prerelease分支" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="160" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-29" value="yidian_prerelease" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1027.5" y="250" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-33" value="&lt;h1 style=&quot;margin: 0px ; padding: 0px ; font-stretch: normal ; line-height: 26px ; word-break: break-all ; position: relative ; color: rgb(51 , 51 , 51)&quot;&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="627.5" y="570" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="nKjDSTNda_gUuitwGgr6-35" target="nKjDSTNda_gUuitwGgr6-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-35" value="微前端构建流水线" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="627.5" y="465" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-38" value="③ 触发构建产物打包（&lt;b&gt;手动&lt;/b&gt;），提交到dist子仓，分支yidian_prerelease" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="622.5" y="530" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-40" value="&lt;div&gt;&lt;span&gt;② 触发医典主流水线&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="410" y="620" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-41" value="&lt;div&gt;① mr到release分支&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="510" y="320" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-47" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="270" y="970" width="250" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=12;" edge="1" parent="1" source="nKjDSTNda_gUuitwGgr6-50" target="nKjDSTNda_gUuitwGgr6-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="nKjDSTNda_gUuitwGgr6-50" target="nKjDSTNda_gUuitwGgr6-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-50" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="312.5" y="1060" width="165" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-51" value="医典" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="940" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-52" value="医典子仓" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="1030" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-53" value="test分支" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="460" y="940" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-54" value="test分支" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="417.5" y="1030" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="nKjDSTNda_gUuitwGgr6-56" target="nKjDSTNda_gUuitwGgr6-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-56" value="feature/xxx 特性分支" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="1115" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-57" value="触发主流水线" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1450" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-58" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="880" y="970" width="250" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-59" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="922.5" y="1060" width="165" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-60" value="健康" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="880" y="940" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-61" value="dist子仓" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="920" y="1030" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-62" value="test-zixun分支" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="940" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-63" value="test_zixun" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1027.5" y="1030" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-64" value="&lt;h1 style=&quot;margin: 0px ; padding: 0px ; font-stretch: normal ; line-height: 26px ; word-break: break-all ; position: relative ; color: rgb(51 , 51 , 51)&quot;&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="627.5" y="1350" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="nKjDSTNda_gUuitwGgr6-66" target="nKjDSTNda_gUuitwGgr6-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-66" value="微前端构建流水线" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="627.5" y="1245" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-67" value="② 触发构建产物打包，提交到dist子仓，分支test_zixun" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="622.5" y="1310" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-68" value="&lt;div&gt;&lt;span&gt;② 触发医典主流水线&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="410" y="1400" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-69" value="&lt;div&gt;① mr到test分支&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="510" y="1100" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=12;" edge="1" parent="1" target="nKjDSTNda_gUuitwGgr6-71">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1004" y="1340" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-71" value="触发主流水线" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="939" y="1450" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-72" value="&lt;div&gt;&lt;span&gt;② 触发健康主流水线&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1019" y="1400" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fontSize=12;" edge="1" parent="1" source="nKjDSTNda_gUuitwGgr6-73" target="nKjDSTNda_gUuitwGgr6-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-73" value="④ 在健康主仓内修改dist子仓指向" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="935" y="680" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nKjDSTNda_gUuitwGgr6-75" value="⑤ 将 yidian_prerelase 提交 mr 到 prerelease" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="375" width="140" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
